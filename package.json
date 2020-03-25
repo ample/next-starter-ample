@@ -1,7 +1,26 @@
 {
-  "name": "next-starter-ample",
-  "version": "0.1.0",
+  "name": "site",
   "private": true,
+  "description": "Ample Next.js Starter",
+  "version": "0.1.0",
+  "dependencies": {
+    "next": "9.3.1",
+    "postcss-normalize": "^8.0.1",
+    "prettier": "^2.0.2",
+    "prettier-stylelint": "^0.4.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "sass": "^1.26.3",
+    "stylelint": "^13.2.1",
+    "stylelint-formatter-pretty": "^2.0.0",
+    "stylelint-order": "^4.0.0",
+    "stylelint-scss": "^3.16.0"
+  },
+  "keywords": [
+    "ample",
+    "next.js"
+  ],
+  "license": "MIT",
   "scripts": {
     "build": "next build",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
@@ -21,17 +40,11 @@
     "last 5 ChromeAndroid versions",
     "Safari >= 10"
   ],
-  "dependencies": {
-    "next": "9.3.1",
-    "postcss-normalize": "^8.0.1",
-    "prettier": "^2.0.2",
-    "prettier-stylelint": "^0.4.2",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "sass": "^1.26.3",
-    "stylelint": "^13.2.1",
-    "stylelint-formatter-pretty": "^2.0.0",
-    "stylelint-order": "^4.0.0",
-    "stylelint-scss": "^3.16.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ample/next-starter-ample"
+  },
+  "bugs": {
+    "url": "https://github.com/ample/next-starter-ample/issues"
   }
 }
