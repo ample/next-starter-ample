@@ -4,6 +4,11 @@
   "description": "Ample Next.js Starter",
   "version": "0.1.0",
   "dependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.19.0",
     "next": "9.3.1",
     "postcss-normalize": "^8.0.1",
     "prettier": "^2.0.2",
@@ -26,6 +31,9 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "dev": "next dev",
     "develop": "next dev",
+    "lint": "yarn lint:js && yarn lint:styles",
+    "lint:js": "eslint -c .eslintrc.js .",
+    "lint:js:fix": "eslint -c .eslintrc.js . --fix",
     "lint:styles": "stylelint --config stylelint.config.js './**/*.scss'",
     "lint:styles:fix": "stylelint --config stylelint.config.js './**/*.scss' --fix",
     "start": "next start"
