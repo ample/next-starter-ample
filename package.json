@@ -3,13 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
+    "dev": "next dev",
+    "develop": "next dev",
+    "lint:styles": "stylelint --config stylelint.config.js 'src/**/*.scss'",
+    "lint:styles:fix": "stylelint --config stylelint.config.js 'src/**/*.scss' --fix",
     "start": "next start"
   },
   "dependencies": {
     "next": "9.3.1",
+    "prettier": "^2.0.2",
+    "prettier-stylelint": "^0.4.2",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "sass": "^1.26.3",
+    "stylelint": "^13.2.1",
+    "stylelint-formatter-pretty": "^2.0.0",
+    "stylelint-order": "^4.0.0",
+    "stylelint-scss": "^3.16.0"
   }
 }
