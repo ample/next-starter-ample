@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "build": "next build",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "dev": "next dev",
     "develop": "next dev",
-    "lint:styles": "stylelint --config stylelint.config.js 'src/**/*.scss'",
-    "lint:styles:fix": "stylelint --config stylelint.config.js 'src/**/*.scss' --fix",
+    "lint:styles": "stylelint --config stylelint.config.js './**/*.scss'",
+    "lint:styles:fix": "stylelint --config stylelint.config.js './**/*.scss' --fix",
     "start": "next start"
   },
   "browserslist": [
