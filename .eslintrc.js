@@ -30,7 +30,15 @@ module.exports = {
   plugins: ["prettier", "jsx-a11y"],
   rules: {
     "react/no-unescaped-entities": "off",
-    "react/prop-types": [2, { ignore: ["className"] }]
+    "react/prop-types": [2, { ignore: ["className"] }],
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        components: ["Link"],
+        specialLink: ["hrefLeft", "hrefRight"],
+        aspects: ["invalidHref", "preferButton"]
+      }
+    ]
   },
   settings: {
     react: {
