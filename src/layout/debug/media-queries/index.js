@@ -6,9 +6,12 @@ import React, { useState } from "react"
 import classNames from "classnames/bind"
 import styles from "./styles.module.scss"
 
+import getConfig from "next/config"
+const { publicRuntimeConfig } = getConfig()
+const { DEBUG_MEDIA_QUERIES } = publicRuntimeConfig
+
 const DebugMediaQueries = () => {
-  // TODO: next.js to except env variables and the following script should work `yarn run develop:debug`
-  if (process.env.NEXT_DEBUG_MEDIA_QUERIES !== "true") return null
+  if (DEBUG_MEDIA_QUERIES !== "true") return null
 
   const [isOpen, setOpen] = useState(false)
 
@@ -22,7 +25,7 @@ const DebugMediaQueries = () => {
 
   return (
     <div className={classes} onClick={handleClick}>
-      <div className={styles.debug_media_queries}>what</div>
+      <div className={styles.debug_media_queries} />
     </div>
   )
 }
