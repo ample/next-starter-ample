@@ -2,12 +2,7 @@ module.exports = {
   plugins: {
     "postcss-normalize": {},
     "postcss-responsive-type": {},
-    "postcss-pxtorem": {
-      mediaQuery: true,
-      propWhiteList: [],
-      replace: true,
-      rootValue: 16
-    },
+    "postcss-pxtorem": {},
     "postcss-preset-env": {
       features: {
         "custom-properties": {
