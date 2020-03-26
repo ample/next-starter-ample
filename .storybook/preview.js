@@ -2,6 +2,9 @@ import React from "react"
 import { addDecorator, addParameters } from "@storybook/react"
 import { withA11y } from "@storybook/addon-a11y"
 
+import { withTests } from "@storybook/addon-jest"
+import results from "../.jest-test-results.json"
+
 import "./storybook.css"
 import "../src/styles/libs/sanitize.css"
 import "../src/styles/global-styles.scss"
@@ -16,8 +19,14 @@ addParameters({
     // order of the tabs
     canvas: null,
     "storybook/docs/panel": null
-  }
+  },
+  jest: ["test.spec.js"]
 })
 
 addDecorator(withA11y)
+addDecorator(
+  withTests({
+    results
+  })
+)
 addDecorator((story) => <>{story()}</>)
