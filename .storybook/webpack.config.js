@@ -1,10 +1,8 @@
 const path = require("path")
 
 module.exports = ({ config }) => {
-  // Support sass files with PostCSS plugins
   config.module.rules.push({
     test: /\.scss$/,
-    // use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"],
     include: path.resolve(__dirname, "../"),
     loaders: [
       require.resolve("style-loader"),
@@ -21,7 +19,24 @@ module.exports = ({ config }) => {
       {
         loader: require.resolve("postcss-loader"),
         options: {
-          sourceMap: true
+          sourceMap: true,
+          postcssOptions: {
+            plugins: [
+              "postcss-normalize",
+              [
+                "postcss-preset-env",
+                {
+                  features: {
+                    "custom-properties": {
+                      preserve: true,
+                      warnings: true
+                    }
+                  },
+                  stage: 1
+                }
+              ]
+            ]
+          }
         }
       },
       {
@@ -32,17 +47,6 @@ module.exports = ({ config }) => {
           },
           sourceMap: true
         }
-      }
-    ]
-  })
-
-  // Support PostCSS
-  config.module.rules.push({
-    test: /\.css$/,
-    include: path.resolve(__dirname, "../"),
-    use: [
-      {
-        loader: require.resolve("postcss-loader")
       }
     ]
   })
