@@ -1,11 +1,11 @@
 import React from "react"
 import renderer from "react-test-renderer"
 
-import Button from "./"
+import { component as SVG, fixtures } from "."
 
-describe("Component", () => {
+describe("SVG", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<Button url="/">testing</Button>).toJSON()
+    const tree = renderer.create(<SVG {...fixtures.angle_down} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

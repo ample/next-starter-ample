@@ -53,21 +53,14 @@
   "license": "MIT",
   "scripts": {
     "build": "next build",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "develop": "DEBUG_MEDIA_QUERIES=true next dev",
-    "lint": "yarn lint:js && yarn lint:styles",
-    "lint:js": "eslint -c .eslintrc.js .",
-    "lint:js:fix": "eslint -c .eslintrc.js . --fix",
-    "lint:styles": "stylelint --config stylelint.config.js './**/*.scss'",
-    "lint:styles:fix": "stylelint --config stylelint.config.js './**/*.scss' --fix",
+    "lint": "eslint -c .eslintrc.js ./src && stylelint --config stylelint.config.js './src/**/*.scss'",
     "start": "next start",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "yarn run test:generate-output && build-storybook -c .storybook -o build/",
     "test": "jest ./src",
     "test:generate-output": "jest --json --outputFile=.jest-test-results.json",
-    "test:generate-output:watch": "yarn run test:generate-output --watch",
-    "test:update": "jest ./src --updateSnapshot",
-    "test:watch": "jest ./src --watch"
+    "test:update": "jest ./src --updateSnapshot"
   },
   "browserslist": [
     "Edge >=13",
