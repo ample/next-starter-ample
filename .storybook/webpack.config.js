@@ -11,7 +11,7 @@ module.exports = ({ config }) => {
         options: {
           importLoaders: 1,
           modules: {
-            localIdentName: "[local]___[hash:base64:5]"
+            localIdentName: "[local]-[hash:base64:3]"
           },
           sourceMap: true
         }
@@ -42,7 +42,9 @@ module.exports = ({ config }) => {
       {
         loader: require.resolve("sass-loader"),
         options: {
+          additionalData: `@use 'global' as *;`,
           sassOptions: {
+            includePaths: [path.resolve(__dirname, "../src/styles")],
             implementation: require.resolve("sass")
           },
           sourceMap: true
