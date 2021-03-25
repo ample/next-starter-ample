@@ -1,12 +1,15 @@
-@use 'global/root';
+@use 'global/variables';
 @use 'global' as *;
 
 // --------------------------------------------------------
 
 body {
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  font-weight: normal;
+  @include font-smoothing;
+
+  color: var(--global-text-color);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
   line-height: 1;
 }
 
@@ -18,16 +21,28 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 500;
-  margin: 0;
+  font-weight: var(--font-weight-bold);
+  margin: 0 0 20px;
 }
 
 h1 {
-  font-size: responsive 22px 36px;
+  @include h1;
 }
 
 h2 {
-  font-size: responsive 18px 18px;
+  @include h2;
+}
+
+h3 {
+  @include h3;
+}
+
+h4 {
+  @include h4;
+}
+
+h5 {
+  @include h5;
 }
 
 // --------------------------------------------------------
@@ -38,6 +53,28 @@ a {
   @include hover {
     text-decoration: underline;
   }
+}
+
+p {
+  margin-bottom: 20px;
+  margin-top: 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+strong {
+  font-weight: 700;
+}
+
+// ---------------------------------------------------------
+
+button {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  padding: 0;
 }
 
 // --------------------------------------------------------

@@ -1,6 +1,9 @@
-@forward 'fonts';
-@forward 'layout';
-@forward 'media';
-@forward 'supports';
-@forward 'typography';
-@forward 'z-index';
+@forward './variables/color';
+@forward './mixins/accessibility';
+@forward './mixins/browsers';
+@forward './mixins/font';
+@forward './mixins/layout';
+@forward './mixins/media';
+@forward './mixins/reset';
+@forward './mixins/support';
+@forward './mixins/typography';
