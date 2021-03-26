@@ -1,30 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
+# Ample's Next.js Starter
 
-## Getting Started
+_Clone repo_
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
+```shell
+git clone git@github.com:ample/next-starter-ample.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```shell
+cd next-starter-ample
+```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+#### Install NVM, if needed
 
-## Learn More
+> [zsh](https://github.com/lukechilds/zsh-nvm) or [bash](https://github.com/creationix/nvm#installation)
 
-To learn more about Next.js, take a look at the following resources:
+_Install Node_
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```shell
+nvm install 15
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/zeit/next.js/) - your feedback and contributions are welcome!
+_Install node packages_
 
-## Deploy on ZEIT Now
+```shell
+yarn
+```
 
-The easiest way to deploy your Next.js app is to use the [ZEIT Now Platform](https://zeit.co/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+_Start the development server ([http://localhost:3000](http://localhost:3000))_
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```shell
+yarn run develop
+```
+
+## Storybook
+
+This starter uses [Storybook](https://storybook.js.org/) for documentation, development, and visual testing. To start the server in development, run the `storybook` command:
+
+```shell
+yarn run storybook
+```
+
+This will launch a browser at localhost:6006, running storybook. Documentation specific to this project can be found in Storybook.
+
+## Linters
+
+It's recommended to set up seamless integration with your editor.
+
+- [ESLint](http://eslint.org/) statically analyzes your code to quickly find problems in JavaScript. ([editor-integration](http://eslint.org/docs/user-guide/integrations#editors))
+- [Stylelint](https://stylelint.io) helps avoid errors and enforces conventions in styles. ([editor-integration](https://stylelint.io/user-guide/complementary-tools/#editor-plugins)\)
+
+> Note: _When using VS Code most ESLint and Stylelint conventions will be fixed automatically._
+
+Run `yarn run lint` to ensure there are no linter errors or warnings before committing.
