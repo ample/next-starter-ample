@@ -1,19 +1,46 @@
 module.exports = {
-  plugins: {
-    "postcss-normalize": {},
-    "postcss-responsive-type": {},
-    "postcss-pxtorem": {},
-    "postcss-preset-env": {
-      features: {
-        "custom-properties": {
-          preserve: true,
-          warnings: true
-        }
-      },
-      stage: 2
-    },
-    autoprefixer: {
-      grid: "autoplace"
-    }
-  }
+  plugins: [
+    "postcss-normalize",
+    "postcss-responsive-type",
+    [
+      "rfs",
+      {
+        factor: 5
+      }
+    ],
+    [
+      "postcss-pxtorem",
+      {
+        mediaQuery: false,
+        propWhiteList: [],
+        replace: true,
+        rootValue: 16
+      }
+    ],
+    [
+      "postcss-preset-env",
+      {
+        features: {
+          "custom-properties": {
+            preserve: true,
+            warnings: true
+          }
+        },
+        stage: 1
+      }
+    ],
+    [
+      "autoprefixer",
+      {
+        grid: "autoplace"
+      }
+    ],
+    // "postcss-em-media-query",
+    [
+      "postcss-sort-media-queries",
+      {
+        sort: "mobile-first"
+      }
+    ]
+  ]
 }

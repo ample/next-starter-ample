@@ -41,7 +41,7 @@ $size: 44px;
   text-align: center;
   transition: width 0.3s ease-in-out;
   width: 0;
-  z-index: $z-index-debug;
+  z-index: var(--z-index-debug);
 
   &:after {
     background-color: transparent;
