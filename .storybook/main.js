@@ -1,3 +1,5 @@
+const path = require("path")
+
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.js"],
   addons: [
@@ -34,10 +36,9 @@ module.exports = {
         {
           loader: "sass-loader",
           options: {
-            // additionalData: `@use 'global' as *;`,
+            additionalData: `@use 'global' as *;`,
             sassOptions: {
-              // includePaths: [path.resolve(__dirname, "../src/styles")],
-              implementation: "sass"
+              includePaths: [path.resolve(__dirname, "../src/styles")]
             },
             sourceMap: true
           }
