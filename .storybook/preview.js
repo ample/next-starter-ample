@@ -14,12 +14,6 @@ addParameters({
   options: {
     showRoots: true
   },
-  previewTabs: {
-    // TODO: Have Docs be the default tab and URL for Storybook
-    // order of the tabs
-    canvas: null,
-    "storybook/docs/panel": null
-  },
   jest: ["test.spec.js"]
 })
 

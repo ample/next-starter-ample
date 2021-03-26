@@ -10,7 +10,8 @@ module.exports = {
       }
     },
     "@storybook/addon-jest",
-    "@storybook/addon-a11y"
+    "@storybook/addon-a11y",
+    "storybook-dark-mode"
   ],
   webpackFinal: async (config) => {
     config.module.rules.push({
