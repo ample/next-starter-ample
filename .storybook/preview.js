@@ -5,20 +5,14 @@ import { withA11y } from "@storybook/addon-a11y"
 import { withTests } from "@storybook/addon-jest"
 import results from "../.jest-test-results.json"
 
-import "./storybook.css"
-import "../src/styles/libs/sanitize.css"
+import "./storybook.scss"
+import "../src/styles/libs/sanitize.scss"
 import "../src/styles/global-styles.scss"
 import "../src/styles/global-utilities.scss"
 
 addParameters({
   options: {
     showRoots: true
-  },
-  previewTabs: {
-    // TODO: Have Docs be the default tab and URL for Storybook
-    // order of the tabs
-    canvas: null,
-    "storybook/docs/panel": null
   },
   jest: ["test.spec.js"]
 })
@@ -30,3 +24,7 @@ addDecorator(
   })
 )
 addDecorator((story) => <>{story()}</>)
+
+export const parameters = {
+  layout: "centered"
+}

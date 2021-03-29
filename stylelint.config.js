@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["./node_modules/prettier-stylelint/config.js"],
+  extends: ["stylelint-config-prettier"],
   plugins: ["stylelint-order", "stylelint-scss"],
   ignoreFiles: ["**/*.js"],
   rules: {
@@ -15,7 +15,12 @@ module.exports = {
     "at-rule-name-space-after": "always",
     "at-rule-semicolon-newline-after": "always",
     "at-rule-semicolon-space-before": "never",
-    "block-closing-brace-newline-after": "always",
+    "block-closing-brace-newline-after": [
+      "always",
+      {
+        ignoreAtRules: ["if", "else"]
+      }
+    ],
     "block-closing-brace-empty-line-before": "never",
     "block-closing-brace-newline-before": "always",
     "block-no-empty": true,
@@ -59,12 +64,6 @@ module.exports = {
     "function-parentheses-newline-inside": "always-multi-line",
     "function-parentheses-space-inside": "never-single-line",
     "function-whitespace-after": "always",
-    indentation: [
-      2,
-      {
-        indentInsideParens: "once-at-root-twice-in-block"
-      }
-    ],
     "length-zero-no-unit": true,
     linebreaks: "unix",
     "no-duplicate-at-import-rules": true,
@@ -96,7 +95,7 @@ module.exports = {
     ],
     "scss/at-else-empty-line-before": "never",
     "scss/at-else-if-parentheses-space-before": "always",
-    "scss/at-function-parentheses-space-before": "always",
+    "scss/at-function-parentheses-space-before": "never",
     "scss/at-mixin-parentheses-space-before": "never",
     "scss/dollar-variable-colon-space-after": "always",
     "scss/dollar-variable-empty-line-before": [

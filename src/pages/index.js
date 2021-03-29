@@ -4,9 +4,9 @@ import Button from "../components/button"
 
 const Home = () => (
   <Layout>
-    Note that the only other page is a <Button url="/404/" label="404 page" />, but there are some
+    Note that the only other page is a <Button url="/404/">404 page</Button>, but there are some
     starter components in <code>src/components</code>. Go to the{" "}
-    <Button url="/docs/" label="documentation" /> section to see more.
+    <Button url="/storybook/">documentation</Button> section to see more.
   </Layout>
 )
 
