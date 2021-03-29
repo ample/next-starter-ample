@@ -1,9 +1,7 @@
-{
-  /* eslint-disable no-undef, jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
-}
-
 import React, { useState } from "react"
-import classNames from "classnames/bind"
+
+import classNames from "classnames"
+
 import styles from "./styles.module.scss"
 
 import getConfig from "next/config"
@@ -24,7 +22,7 @@ const DebugMediaQueries = () => {
   }
 
   return (
-    <div className={classes} onClick={handleClick}>
+    <div className={classes} onClick={handleClick} aria-hidden="true">
       <div className={styles.debug_media_queries} />
     </div>
   )

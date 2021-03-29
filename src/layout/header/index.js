@@ -1,17 +1,5 @@
-import React from "react"
-// import PropTypes from "prop-types"
+import component from "./component"
 
-import styles from "./styles.module.scss"
+export default component
 
-const Header = () => (
-  <header className={styles.header}>
-    This is the header.
-    <hr />
-  </header>
-)
-
-Header.propTypes = {}
-
-Header.defaultProps = {}
-
-export default Header
+export { component }

@@ -50,7 +50,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "next build",
+    "build": "DEBUG_MEDIA_QUERIES=false next build",
     "develop": "DEBUG_MEDIA_QUERIES=true next dev",
     "lint": "eslint -c .eslintrc.js ./src && stylelint --config stylelint.config.js './src/**/*.scss'",
     "start": "next start",
