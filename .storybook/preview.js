@@ -24,3 +24,7 @@ addDecorator(
   })
 )
 addDecorator((story) => <>{story()}</>)
+
+export const parameters = {
+  layout: "centered"
+}
