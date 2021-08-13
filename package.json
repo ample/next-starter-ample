@@ -21,7 +21,7 @@
     "eslint-plugin-react": "^7.23.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^25.2.2",
-    "next": "10.0.9",
+    "next": "11.1.0",
     "postcss-em-media-query": "^4.1.0",
     "postcss-loader": "^4.2.0",
     "postcss-normalize": "^9.0.0",
