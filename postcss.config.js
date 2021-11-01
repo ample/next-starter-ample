@@ -1,7 +1,6 @@
 module.exports = {
   plugins: [
     "postcss-normalize",
-    "postcss-responsive-type",
     [
       "rfs",
       {
@@ -35,7 +34,7 @@ module.exports = {
         grid: "autoplace"
       }
     ],
-    // "postcss-em-media-query",
+    "postcss-em-media-query",
     [
       "postcss-sort-media-queries",
       {
