@@ -6,7 +6,6 @@
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@babel/eslint-parser": "^7.16.0",
-    "@fontsource/open-sans": "^4.2.2",
     "@storybook/addon-a11y": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-jest": "^6.3.12",
