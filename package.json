@@ -49,6 +49,10 @@
     "next.js"
   ],
   "license": "MIT",
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ],
   "scripts": {
     "build": "DEBUG_MEDIA_QUERIES=false next build",
     "develop": "DEBUG_MEDIA_QUERIES=true next dev",
