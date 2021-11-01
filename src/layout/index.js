@@ -1,10 +1,14 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Head from "next/head"
+import React from 'react';
+import PropTypes from 'prop-types';
+import Head from 'next/head';
 
-import Footer from "./footer"
-import Header from "./header"
-import DebugMediaQueries from "./debug-media-queries"
+// ---------------------------------------------------------
+
+import Footer from './footer';
+import Header from './header';
+import DebugMediaQueries from './debug-media-queries';
+
+// ---------------------------------------------------------
 
 const Layout = ({ children }) => (
   <>
@@ -19,10 +23,10 @@ const Layout = ({ children }) => (
 
     <DebugMediaQueries />
   </>
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired
-}
+};
 
-export default Layout
+export default Layout;

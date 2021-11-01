@@ -1,12 +1,12 @@
 module.exports = {
-  collectCoverageFrom: ["**/*.{js,jsx,ts,tsx}", "!**/*.d.ts", "!**/node_modules/**"],
-  testPathIgnorePatterns: ["/node_modules/", "/.next/"],
-  transform: {
-    "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest"
-  },
-  transformIgnorePatterns: ["/node_modules/", "^.+\\.module\\.(css|sass|scss)$"],
+  collectCoverageFrom: ['**/*.{js,jsx,ts,tsx}', '!**/*.d.ts', '!**/node_modules/**'],
   moduleNameMapper: {
-    "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+    '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy'
   },
-  testURL: `http://localhost`
-}
+  testPathIgnorePatterns: ['/node_modules/', '/.next/'],
+  testURL: `http://localhost`,
+  transform: {
+    '^.+\\.(js|jsx|ts|tsx)$': '<rootDir>/node_modules/babel-jest'
+  },
+  transformIgnorePatterns: ['/node_modules/', '^.+\\.module\\.(css|sass|scss)$']
+};

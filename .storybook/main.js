@@ -1,52 +1,52 @@
-const path = require("path")
+const path = require('path');
 
 module.exports = {
-  stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.js"],
+  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.js'],
   addons: [
     {
-      name: "@storybook/addon-essentials",
+      name: '@storybook/addon-essentials',
       options: {
         controls: false
       }
     },
-    "@storybook/addon-jest",
-    "@storybook/addon-a11y",
-    "storybook-dark-mode"
+    '@storybook/addon-jest',
+    '@storybook/addon-a11y',
+    'storybook-dark-mode'
   ],
   webpackFinal: async (config) => {
     config.module.rules.push({
       test: /\.scss$/,
       loaders: [
-        "style-loader",
+        'style-loader',
         {
-          loader: "css-loader",
+          loader: 'css-loader',
           options: {
             importLoaders: 1,
             modules: {
-              localIdentName: "[local]-[hash:base64:3]"
+              localIdentName: '[local]-[hash:base64:3]'
             },
             sourceMap: true
           }
         },
         {
-          loader: "postcss-loader",
+          loader: 'postcss-loader',
           options: {
             sourceMap: true
           }
         },
         {
-          loader: "sass-loader",
+          loader: 'sass-loader',
           options: {
             additionalData: `@use 'global' as *;`,
             sassOptions: {
-              includePaths: [path.resolve(__dirname, "../src/styles")]
+              includePaths: [path.resolve(__dirname, '../src/styles')]
             },
             sourceMap: true
           }
         }
       ]
-    })
+    });
 
-    return config
+    return config;
   }
-}
+};

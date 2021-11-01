@@ -1,5 +1,5 @@
-import component from "./component"
+import component from './component';
 
-export default component
+export default component;
 
-export { component }
+export { component };

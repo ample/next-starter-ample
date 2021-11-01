@@ -1,14 +1,14 @@
 module.exports = {
   plugins: [
-    "postcss-normalize",
+    'postcss-normalize',
     [
-      "rfs",
+      'rfs',
       {
         factor: 5
       }
     ],
     [
-      "postcss-pxtorem",
+      'postcss-pxtorem',
       {
         mediaQuery: false,
         propWhiteList: [],
@@ -17,10 +17,10 @@ module.exports = {
       }
     ],
     [
-      "postcss-preset-env",
+      'postcss-preset-env',
       {
         features: {
-          "custom-properties": {
+          'custom-properties': {
             preserve: true,
             warnings: true
           }
@@ -29,17 +29,17 @@ module.exports = {
       }
     ],
     [
-      "autoprefixer",
+      'autoprefixer',
       {
-        grid: "autoplace"
+        grid: 'autoplace'
       }
     ],
-    "postcss-em-media-query",
+    'postcss-em-media-query',
     [
-      "postcss-sort-media-queries",
+      'postcss-sort-media-queries',
       {
-        sort: "mobile-first"
+        sort: 'mobile-first'
       }
     ]
   ]
-}
+};

@@ -1,17 +1,21 @@
-import React from "react"
+import React from 'react';
 // import PropTypes from "prop-types"
 
-import styles from "./styles.module.scss"
+// ---------------------------------------------------------
+
+import { header } from './styles.module.scss';
+
+// ---------------------------------------------------------
 
 const Header = () => (
-  <header className={styles.header}>
+  <header className={header}>
     This is the header.
     <hr />
   </header>
-)
+);
 
-Header.propTypes = {}
+Header.propTypes = {};
 
-Header.defaultProps = {}
+Header.defaultProps = {};
 
-export default Header
+export default Header;

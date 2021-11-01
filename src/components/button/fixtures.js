@@ -1,16 +1,16 @@
 export default {
+  arrow: {
+    label: 'Call to action',
+    theme: 'arrow',
+    url: '#'
+  },
   default: {
-    label: "Call to action",
-    url: "#"
+    label: 'Call to action',
+    url: '#'
   },
   outline: {
-    label: "Call to action",
-    theme: "outline",
-    url: "#"
-  },
-  arrow: {
-    label: "Call to action",
-    theme: "arrow",
-    url: "#"
+    label: 'Call to action',
+    theme: 'outline',
+    url: '#'
   }
-}
+};
