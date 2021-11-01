@@ -45,6 +45,9 @@
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.19.0"
   },
+  "devDependencies": {
+    "husky": "^7.0.4"
+  },
   "keywords": [
     "ample",
     "next.js"
@@ -58,6 +61,7 @@
     "build": "DEBUG_MEDIA_QUERIES=false next build",
     "develop": "DEBUG_MEDIA_QUERIES=true next dev",
     "lint": "eslint -c .eslintrc.js ./src && stylelint --config stylelint.config.js './src/**/*.scss'",
+    "postinstall": "husky install",
     "start": "next start",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "yarn run test:generate-output && build-storybook -c .storybook -o build/",
