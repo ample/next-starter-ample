@@ -57,8 +57,6 @@ module.exports = {
     builder: 'webpack5'
   },
   webpackFinal: async (config) => {
-    config.resolve.mainFields = ['browser', 'module', 'main'];
-
     config.resolve = {
       alias: {
         path: require.resolve('path-browserify'),
