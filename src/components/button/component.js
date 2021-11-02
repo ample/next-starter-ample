@@ -19,7 +19,8 @@ const themeOptions = {
 
 // ---------------------------------------------------------
 
-const Button = ({ children, className, theme, title, url }) => {
+const Button = (props) => {
+  let { children, className, label, theme, title, url } = props;
   const classes = classNames(button, {
     [className]: className,
     [themeOptions[theme]]: themeOptions[theme]
@@ -29,6 +30,7 @@ const Button = ({ children, className, theme, title, url }) => {
     <Link href={url}>
       <a className={classes} title={title}>
         {children}
+        {label}
         {theme === 'arrow' && <SVG name="angle-right" />}
       </a>
     </Link>
@@ -40,6 +42,11 @@ Button.propTypes = {
    * Text rendered to the screen inside the button.
    */
   children: PropTypes.string.isRequired,
+
+  /**
+   * Specifies the label
+   */
+  label: PropTypes.string,
 
   /**
    * Specifies the theme.

@@ -25,9 +25,6 @@ export default {
 
 const Template = (args) => <Button {...args} />;
 
-export const props = Template.bind({});
-props.args = fixtures.props;
-
 export const defaultTheme = Template.bind({});
 defaultTheme.args = fixtures.default;
 
