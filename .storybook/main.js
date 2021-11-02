@@ -61,7 +61,14 @@ module.exports = {
 
     config.resolve = {
       alias: {
-        path: require.resolve('path-browserify')
+        path: require.resolve('path-browserify'),
+        '@components': path.resolve(__dirname, '../src/components'),
+        '@content': path.resolve(__dirname, '../src/content'),
+        '@layout': path.resolve(__dirname, '../src/layout'),
+        '@root': path.resolve(__dirname, '../'),
+        '@snippets': path.resolve(__dirname, '../src/snippets'),
+        '@src': path.resolve(__dirname, '../src'),
+        '@templates': path.resolve(__dirname, '../src/templates')
       }
     };
 

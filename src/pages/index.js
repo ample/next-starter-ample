@@ -2,8 +2,8 @@ import React from 'react';
 
 // ---------------------------------------------------------
 
-import Button from '../components/button';
-import Layout from '../layout';
+import Button from '@components/button';
+import Layout from '@layout/index';
 
 // ---------------------------------------------------------
 

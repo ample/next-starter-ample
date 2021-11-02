@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 // ---------------------------------------------------------
 
-import SVG from '../svg';
+import SVG from '@components/svg';
 
 // ---------------------------------------------------------
 
