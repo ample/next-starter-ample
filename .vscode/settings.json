@@ -18,5 +18,7 @@
   "files.eol": "\n",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "scss.validate": false
+  "scss.validate": false,
+  "stylelint.stylelintPath": "node_modules/stylelint",
+  "stylelint.validate": ["css", "scss"]
 }

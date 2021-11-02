@@ -1,7 +1,9 @@
 module.exports = {
-  extends: ['stylelint-config-prettier'],
+  customSyntax: 'postcss-scss',
+  extends: ['stylelint-config-prettier', 'stylelint-config-standard-scss'],
+  files: ['**/*.scss'],
   ignoreFiles: ['**/*.js'],
-  plugins: ['stylelint-order', 'stylelint-scss'],
+  plugins: ['stylelint-order'],
   rules: {
     'at-rule-empty-line-before': [
       'always',
@@ -16,12 +18,7 @@ module.exports = {
     'at-rule-semicolon-newline-after': 'always',
     'at-rule-semicolon-space-before': 'never',
     'block-closing-brace-empty-line-before': 'never',
-    'block-closing-brace-newline-after': [
-      'always',
-      {
-        ignoreAtRules: ['if', 'else']
-      }
-    ],
+    'block-closing-brace-newline-after': 'always',
     'block-closing-brace-newline-before': 'always',
     'block-no-empty': true,
     'block-opening-brace-newline-after': 'always',
@@ -93,28 +90,14 @@ module.exports = {
         except: ['first-nested']
       }
     ],
-    'scss/at-else-empty-line-before': 'never',
-    'scss/at-else-if-parentheses-space-before': 'always',
-    'scss/at-function-parentheses-space-before': 'never',
-    'scss/at-mixin-parentheses-space-before': 'never',
-    'scss/dollar-variable-colon-space-after': 'always',
-    'scss/dollar-variable-empty-line-before': [
-      'always',
-      {
-        except: ['first-nested', 'after-comment', 'after-dollar-variable'],
-        ignore: ['after-comment', 'inside-single-line-block']
-      }
-    ],
-    'scss/double-slash-comment-empty-line-before': [
-      'always',
-      {
-        except: ['first-nested'],
-        ignore: ['between-comments', 'stylelint-commands']
-      }
-    ],
+    'scss/at-else-closing-brace-newline-after': null,
+    'scss/at-else-closing-brace-space-after': null,
+    'scss/at-if-closing-brace-newline-after': null,
+    'scss/at-if-closing-brace-space-after': null,
     'selector-attribute-brackets-space-inside': 'never',
     'selector-attribute-operator-space-after': 'never',
     'selector-attribute-operator-space-before': 'never',
+    'selector-class-pattern': '^[a-z0-9]+(_[a-z0-9]+)*$',
     'selector-combinator-space-after': 'always',
     'selector-combinator-space-before': 'always',
     'selector-list-comma-newline-after': 'always',

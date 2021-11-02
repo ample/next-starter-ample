@@ -1,3 +1,4 @@
+@use 'sass:list';
 @use 'sass:map';
 @use 'sass:math';
 
@@ -24,7 +25,7 @@ $media-queries: (
 
 // ---------------------------------------------------------
 
-$background-color: rgba(0, 0, 0, 0.8);
+$background-color: rgb(0 0 0 / 80%);
 $content-color: #ded;
 $size: 44px;
 
@@ -51,7 +52,7 @@ $size: 44px;
   width: 0;
   z-index: var(--z-index-debug);
 
-  &:after {
+  &::after {
     background-color: transparent;
     border-color: transparent transparent transparent $background-color;
     border-style: solid;
@@ -69,18 +70,18 @@ $size: 44px;
 
 .debug_media_queries {
   font-size: 0;
-  opacity: 0;
+  opacity: 0%;
   transition: opacity 0.5s 0.1s ease-in-out;
 
   .is_showing & {
     color: $content-color;
     font-size: 12px;
-    opacity: 1;
+    opacity: 100%;
   }
 
   @each $mq in $media-queries {
-    $min-width: em(nth($mq, 2));
-    $min-width-pixels: nth($mq, 2);
+    $min-width: em(list.nth($mq, 2));
+    $min-width-pixels: list.nth($mq, 2);
 
     @media screen and (min-width: $min-width) {
       &::after {

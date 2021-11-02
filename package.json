@@ -14,11 +14,11 @@
     "postcss-pxtorem": "^6.0.0",
     "postcss-sort-media-queries": "^4.1.0",
     "prop-types": "^15.7.2",
-    "react-dom": "^17.0.2",
     "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "rfs": "^9.0.6",
-    "sass-loader": "^12.3.0",
-    "sass": "^1.43.4"
+    "sass": "^1.43.4",
+    "sass-loader": "^12.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -41,11 +41,11 @@
     "prettier-stylelint": "^0.4.2",
     "prettier": "^2.4.1",
     "react-test-renderer": "^17.0.2",
+    "storybook-dark-mode": "^1.0.8",
     "stylelint-config-prettier": "^9.0.3",
-    "stylelint-order": "^5.0.0",
-    "stylelint-scss": "^4.0.0",
+    "stylelint-config-standard-scss": "^2.0.0",
     "stylelint": "^14.0.1",
-    "storybook-dark-mode": "^1.0.8"
+    "stylelint-order": "^5.0.0"
   },
   "keywords": [
     "ample",
