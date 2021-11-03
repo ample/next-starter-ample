@@ -25,17 +25,23 @@ export default {
 
 const Template = (args) => <Button {...args} />;
 
+export const props = Template.bind({});
+props.args = fixtures.props;
+
 export const defaultTheme = Template.bind({});
-defaultTheme.args = fixtures.default;
+defaultTheme.args = {
+  ...props.args,
+  ...fixtures.default
+};
 
 export const outlineTheme = Template.bind({});
 outlineTheme.args = {
-  ...defaultTheme.args,
+  ...props.args,
   ...fixtures.outline
 };
 
 export const ArrowTheme = Template.bind({});
 ArrowTheme.args = {
-  ...defaultTheme.args,
+  ...props.args,
   ...fixtures.arrow
 };

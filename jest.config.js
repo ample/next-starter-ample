@@ -8,12 +8,17 @@ module.exports = {
     '\\@snippets\\/(.*)$': `<rootDir>/src/snippets/$1`,
     '\\@src\\/(.*)$': `<rootDir>/src/$1`,
     '\\@templates\\/(.*)$': `<rootDir>/src/templates/$1`,
+    '^.+\\.(jpg|jpeg|png|gif|webp|avif|svg)$': '<rootDir>/.jest/__mocks__/file.js',
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy'
   },
-  testPathIgnorePatterns: ['/node_modules/', '/.next/'],
-  testURL: `http://localhost`,
+  setupFilesAfterEnv: ['<rootDir>/.jest/jest.setup.js'],
+  testEnvironment: 'jsdom',
+  testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': '<rootDir>/node_modules/babel-jest'
+    '^.+\\.(js|jsx|ts|tsx)$': [
+      '<rootDir>/node_modules/babel-jest',
+      { configFile: './.jest/.babelrc' }
+    ]
   },
   transformIgnorePatterns: ['/node_modules/', '^.+\\.module\\.(css|sass|scss)$']
 };

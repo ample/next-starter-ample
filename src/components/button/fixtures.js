@@ -1,16 +1,16 @@
 export default {
   arrow: {
-    label: 'Call to action',
-    theme: 'arrow',
-    url: '#'
+    theme: 'arrow'
   },
   default: {
-    label: 'Call to action',
-    url: '#'
+    theme: 'default'
   },
   outline: {
+    theme: 'outline'
+  },
+  props: {
     label: 'Call to action',
-    theme: 'outline',
+    theme: 'arrow',
     url: '#'
   }
 };

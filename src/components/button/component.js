@@ -39,9 +39,9 @@ const Button = (props) => {
 
 Button.propTypes = {
   /**
-   * Text rendered to the screen inside the button.
+   * Specifies additional items to be rendered inside the button.
    */
-  children: PropTypes.string.isRequired,
+  children: PropTypes.string,
 
   /**
    * Specifies the label
