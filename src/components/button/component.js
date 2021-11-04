@@ -1,53 +1,71 @@
-import React from "react"
-import PropTypes from "prop-types"
-import classNames from "classnames"
-import Link from "next/link"
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import Link from 'next/link';
 
-import SVG from "../svg"
+// ---------------------------------------------------------
 
-import styles from "./styles.module.scss"
+import SVG from '@components/svg';
 
-const Button = ({ children, className, title, theme, url }) => {
-  const classes = classNames(styles.button, {
+// ---------------------------------------------------------
+
+import { button, theme_arrow, theme_default, theme_outline } from './styles.module.scss';
+
+const themeOptions = {
+  arrow: theme_arrow,
+  default: theme_default,
+  outline: theme_outline
+};
+
+// ---------------------------------------------------------
+
+const Button = (props) => {
+  let { children, className, label, theme, title, url } = props;
+  const classes = classNames(button, {
     [className]: className,
-    [styles[`theme_${theme}`]]: theme
-  })
+    [themeOptions[theme]]: themeOptions[theme]
+  });
 
   return (
     <Link href={url}>
       <a className={classes} title={title}>
         {children}
-        {theme === "arrow" && <SVG name="angle-right" />}
+        {label}
+        {theme === 'arrow' && <SVG name="angle-right" />}
       </a>
     </Link>
-  )
-}
+  );
+};
 
 Button.propTypes = {
   /**
-   * Specifies additional class names
+   * Specifies additional items to be rendered inside the button.
    */
-  className: PropTypes.string,
+  children: PropTypes.string,
+
   /**
-   * Text rendered to the screen inside the button.
+   * Specifies the label
    */
-  children: PropTypes.string.isRequired,
+  label: PropTypes.string,
+
   /**
-   * Specifies the theme of button
+   * Specifies the theme.
    */
-  theme: PropTypes.oneOf(["arrow", "default", "outline"]),
+  theme: PropTypes.oneOf(Object.keys(themeOptions)),
+
   /**
-   * Specifies the button title attribute
+   * Specifies the title attribute
    */
   title: PropTypes.string,
+
   /**
-   * Specifies where the button links
+   * Specifies the href attribute
    */
   url: PropTypes.string.isRequired
-}
+};
 
 Button.defaultProps = {
-  theme: "default"
-}
+  theme: 'default'
+};
 
-export default Button
+export default Button;

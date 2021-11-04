@@ -17,3 +17,15 @@
     padding: 0;
   }
 }
+
+// ---------------------------------------------------------
+
+@mixin reset-select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  outline: none;
+}

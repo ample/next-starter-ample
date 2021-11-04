@@ -1,30 +1,44 @@
-import React from "react"
-import { addDecorator, addParameters } from "@storybook/react"
-import { withA11y } from "@storybook/addon-a11y"
+import React from 'react';
+import { action } from '@storybook/addon-actions';
+import { addDecorator, addParameters } from '@storybook/react';
+import { setConsoleOptions } from '@storybook/addon-console';
+import { themes } from '@storybook/theming';
+import { withTests } from '@storybook/addon-jest';
+import results from '../.jest-test-results.json';
 
-import { withTests } from "@storybook/addon-jest"
-import results from "../.jest-test-results.json"
+import './storybook.scss';
+import '../src/styles/libs/sanitize.scss';
+import '../src/styles/global-styles.scss';
+import '../src/styles/global-utilities.scss';
 
-import "./storybook.scss"
-import "../src/styles/libs/sanitize.scss"
-import "../src/styles/global-styles.scss"
-import "../src/styles/global-utilities.scss"
+// Storybook addon for redirecting console output into action logger panel
+setConsoleOptions({
+  panelExclude: []
+});
 
 addParameters({
-  options: {
-    showRoots: true
-  },
-  jest: ["test.spec.js"]
-})
+  jest: ['test.spec.js']
+});
 
-addDecorator(withA11y)
 addDecorator(
   withTests({
     results
   })
-)
-addDecorator((story) => <>{story()}</>)
+);
+
+addDecorator((story) => <>{story()}</>);
 
 export const parameters = {
-  layout: "centered"
-}
+  actions: { argTypesRegex: '^on[A-Z].*' },
+  controls: { sort: 'alpha' },
+  backgrounds: {
+    default: 'light',
+    grid: {
+      disable: true
+    }
+  },
+  docs: {
+    theme: process.env.STORYBOOK_THEME_DARK === true ? themes.dark : themes.light
+  },
+  layout: 'centered'
+};
