@@ -23,7 +23,7 @@
     "@storybook/react": "^5.3.17",
     "babel-loader": "^8.0.2",
     "css-loader": "^1.0.0",
-    "node-sass": "^4.9.3",
+    "node-sass": "^7.0.1",
     "postcss-loader": "^5.3.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
