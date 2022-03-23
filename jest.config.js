@@ -1,12 +1,11 @@
 module.exports = {
   collectCoverageFrom: ['**/*.{js,jsx,ts,tsx}', '!**/*.d.ts', '!**/node_modules/**'],
   moduleNameMapper: {
-    '\\@components\\/(.*)$': `<rootDir>/src/components/$1`,
-    '\\@content\\/(.*)$': `<rootDir>/src/content/$1`,
-    '\\@layout\\/(.*)$': `<rootDir>/src/layout/$1`,
+    '\\@components\\/(.*)$': `<rootDir>/components/$1`,
+    '\\@content\\/(.*)$': `<rootDir>/content/$1`,
+    '\\@layout\\/(.*)$': `<rootDir>/layout/$1`,
     '\\@root\\/(.*)$': `<rootDir>/$1`,
-    '\\@src\\/(.*)$': `<rootDir>/src/$1`,
-    '\\@templates\\/(.*)$': `<rootDir>/src/templates/$1`,
+    '\\@templates\\/(.*)$': `<rootDir>/templates/$1`,
     '^.+\\.(jpg|jpeg|png|gif|webp|avif|svg)$': '<rootDir>/.jest/__mocks__/file.js',
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy'
   },

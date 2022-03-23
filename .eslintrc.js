@@ -11,7 +11,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['./src/pages/**/*.js', './src/templates/**/*.js'],
+      files: ['./pages/**/*.js', './templates/**/*.js'],
       rules: {
         'react/prop-types': 0
       }

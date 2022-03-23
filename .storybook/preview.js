@@ -7,9 +7,9 @@ import { withTests } from '@storybook/addon-jest';
 import results from '../.jest-test-results.json';
 
 import './storybook.scss';
-import '../src/styles/libs/sanitize.scss';
-import '../src/styles/global-styles.scss';
-import '../src/styles/global-utilities.scss';
+import '../styles/libs/sanitize.scss';
+import '../styles/global-styles.scss';
+import '../styles/global-utilities.scss';
 
 // Storybook addon for redirecting console output into action logger panel
 setConsoleOptions({

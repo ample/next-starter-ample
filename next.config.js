@@ -15,7 +15,7 @@ module.exports = {
   },
   requireConfigFile: false,
   sassOptions: {
-    includePaths: [path.join(__dirname, 'src/styles')],
+    includePaths: [path.join(__dirname, 'styles')],
     prependData: `@use 'global' as *;`
   }
 };

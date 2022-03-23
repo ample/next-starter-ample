@@ -3,7 +3,7 @@ const path = require('path');
 const postcssConfig = require('../postcss.config');
 
 module.exports = {
-  stories: ['../src/**/*.stories.mdx', '../src/**/*stories.js'],
+  stories: ['../**/*.stories.mdx', '../**/*stories.js'],
   addons: [
     {
       name: '@storybook/preset-scss',
@@ -34,7 +34,7 @@ module.exports = {
         sassLoaderOptions: {
           additionalData: `@use 'global' as *;`,
           sassOptions: {
-            includePaths: [path.join(__dirname, '../src/styles')]
+            includePaths: [path.join(__dirname, '../styles')]
           }
         }
       }
@@ -60,12 +60,11 @@ module.exports = {
     config.resolve = {
       alias: {
         path: require.resolve('path-browserify'),
-        '@components': path.resolve(__dirname, '../src/components'),
-        '@content': path.resolve(__dirname, '../src/content'),
-        '@layout': path.resolve(__dirname, '../src/layout'),
+        '@components': path.resolve(__dirname, '../components'),
+        '@content': path.resolve(__dirname, '../content'),
+        '@layout': path.resolve(__dirname, '../layout'),
         '@root': path.resolve(__dirname, '../'),
-        '@src': path.resolve(__dirname, '../src'),
-        '@templates': path.resolve(__dirname, '../src/templates')
+        '@templates': path.resolve(__dirname, '../templates')
       }
     };
 

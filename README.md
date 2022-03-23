@@ -48,12 +48,11 @@ This project supports alias imports. This provides a means for importing compone
 
 The convention is to treat directories in our project like [NPM scopes](https://docs.npmjs.com/about-scopes). The scope is to prepend with a `@` character. There are several prefixes supported out of the box:
 
-- `@components` maps to `./src/components`
-- `@content` maps to `./src/content`
-- `@layout` maps to `./src/layout`
+- `@components` maps to `./components`
+- `@content` maps to `./content`
+- `@layout` maps to `./layout`
 - `@root` maps to `./`
-- `@src` maps to `./src`
-- `@templates` maps to `./src/templates`
+- `@templates` maps to `./templates`
 
 Unfortunately, for seamless integration across the board, we have to configure aliases for every place in which we're going to use them, which means _at least_ NEXT.js, Storybook, Jest, and VS Code. Therefore, they are replicated (with the appropriate syntax) in:
 
