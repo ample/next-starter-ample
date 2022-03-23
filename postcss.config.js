@@ -31,7 +31,7 @@ module.exports = {
     [
       'autoprefixer',
       {
-        grid: 'autoplace',
+        grid: true,
       },
     ],
     'postcss-em-media-query',
