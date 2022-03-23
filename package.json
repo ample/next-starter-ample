@@ -60,6 +60,7 @@
   },
   "scripts": {
     "build": "DEBUG_MEDIA_QUERIES=false next build",
+    "clean": "rm -rf .next",
     "develop": "DEBUG_MEDIA_QUERIES=true next dev",
     "lint": "eslint -c .eslintrc.js . && stylelint --config stylelint.config.js './**/*.scss'",
     "start": "next start",
