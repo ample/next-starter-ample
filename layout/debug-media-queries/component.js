@@ -19,7 +19,7 @@ const DebugMediaQueries = () => {
   const [isOpen, setOpen] = useState(false);
 
   const classes = classNames(debug, isOpen, {
-    [is_showing]: isOpen
+    [is_showing]: isOpen,
   });
 
   const handleClick = () => {

@@ -9,12 +9,17 @@ import SVG from '@components/svg';
 
 // ---------------------------------------------------------
 
-import { button, theme_arrow, theme_default, theme_outline } from './styles.module.scss';
+import {
+  button,
+  theme_arrow,
+  theme_default,
+  theme_outline,
+} from './styles.module.scss';
 
 const themeOptions = {
   arrow: theme_arrow,
   default: theme_default,
-  outline: theme_outline
+  outline: theme_outline,
 };
 
 // ---------------------------------------------------------
@@ -23,7 +28,7 @@ const Button = (props) => {
   let { children, className, label, theme, title, url } = props;
   const classes = classNames(button, {
     [className]: className,
-    [themeOptions[theme]]: themeOptions[theme]
+    [themeOptions[theme]]: themeOptions[theme],
   });
 
   return (
@@ -61,11 +66,11 @@ Button.propTypes = {
   /**
    * Specifies the href attribute
    */
-  url: PropTypes.string.isRequired
+  url: PropTypes.string.isRequired,
 };
 
 Button.defaultProps = {
-  theme: 'default'
+  theme: 'default',
 };
 
 export default Button;

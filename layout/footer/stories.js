@@ -7,12 +7,12 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Global Footer Navigation with Social Nav'
-      }
+        component: 'Global Footer Navigation with Social Nav',
+      },
     },
-    layout: 'fullscreen'
+    layout: 'fullscreen',
   },
-  title: 'Layout/Footer'
+  title: 'Layout/Footer',
 };
 
 const Template = (args) => (

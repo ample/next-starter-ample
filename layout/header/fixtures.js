@@ -1,3 +1,3 @@
 export default {
-  heading: 'This is the header.'
+  heading: 'This is the header.',
 };

@@ -15,7 +15,7 @@ SVG.propTypes = {
   /**
    * The name of the svg
    */
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 };
 
 SVG.defaultProps = {};

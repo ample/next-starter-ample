@@ -1,7 +1,12 @@
 {
   "name": "ample-next-starter",
-  "private": true,
   "description": "Ample Next.js Starter",
+  "keywords": [
+    "ample",
+    "next.js"
+  ],
+  "license": "MIT",
+  "private": true,
   "version": "0.1.0",
   "dependencies": {
     "autoprefixer": "^10.4.0",
@@ -45,7 +50,7 @@
     "eslint-plugin-sort-keys-fix": "^1.1.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.3.1",
-    "prettier": "^2.4.1",
+    "prettier": "^2.6.0",
     "prettier-stylelint": "^0.4.2",
     "react-test-renderer": "^17.0.2",
     "storybook-dark-mode": "^1.0.8",
@@ -54,15 +59,6 @@
     "stylelint-config-standard-scss": "^2.0.1",
     "stylelint-order": "^5.0.0"
   },
-  "keywords": [
-    "ample",
-    "next.js"
-  ],
-  "license": "MIT",
-  "browserslist": [
-    "defaults",
-    "not IE 11"
-  ],
   "scripts": {
     "build": "DEBUG_MEDIA_QUERIES=false next build",
     "develop": "DEBUG_MEDIA_QUERIES=true next dev",
@@ -73,6 +69,17 @@
     "test": "jest .",
     "test:generate-output": "jest --json --outputFile=.jest-test-results.json",
     "test:update": "jest . --updateSnapshot"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ],
+  "prettier": {
+    "endOfLine": "lf",
+    "printWidth": 80,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "useTabs": false
   },
   "repository": {
     "type": "git",

@@ -22,7 +22,7 @@ Header.propTypes = {
   /**
    * Specifies the heading
    */
-  heading: PropTypes.string
+  heading: PropTypes.string,
 };
 
 Header.defaultProps = {};

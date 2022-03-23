@@ -22,7 +22,7 @@ Footer.propTypes = {
   /**
    * Specifies the heading
    */
-  heading: PropTypes.string
+  heading: PropTypes.string,
 };
 
 Footer.defaultProps = {};

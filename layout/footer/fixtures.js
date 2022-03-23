@@ -1,3 +1,3 @@
 export default {
-  heading: 'And this is the footer.'
+  heading: 'And this is the footer.',
 };

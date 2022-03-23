@@ -3,31 +3,35 @@ module.exports = {
     browser: true,
     es6: true,
     jest: true,
-    node: true
+    node: true,
   },
-  extends: ['eslint:recommended', 'plugin:jsx-a11y/recommended', 'plugin:react/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:react/recommended',
+  ],
   globals: {
-    __PATH_PREFIX__: true
+    __PATH_PREFIX__: true,
   },
   overrides: [
     {
       files: ['./pages/**/*.js', './templates/**/*.js'],
       rules: {
-        'react/prop-types': 0
-      }
-    }
+        'react/prop-types': 0,
+      },
+    },
   ],
   parser: '@babel/eslint-parser',
   parserOptions: {
     babelOptions: {
-      presets: ['@babel/preset-react']
+      presets: ['@babel/preset-react'],
     },
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 12,
     requireConfigFile: false,
-    sourceType: 'module'
+    sourceType: 'module',
   },
   plugins: ['jest', 'jsx-a11y', 'prettier', 'react', 'sort-keys-fix'],
   rules: {
@@ -37,17 +41,21 @@ module.exports = {
       {
         aspects: ['invalidHref', 'preferButton'],
         components: ['Link'],
-        specialLink: ['hrefLeft', 'hrefRight']
-      }
+        specialLink: ['hrefLeft', 'hrefRight'],
+      },
     ],
     'react/no-unescaped-entities': 0,
     'react/prop-types': [2, { ignore: ['className'] }],
-    'sort-keys': ['error', 'asc', { caseSensitive: true, minKeys: 3, natural: true }],
-    'sort-keys-fix/sort-keys-fix': 1
+    'sort-keys': [
+      'error',
+      'asc',
+      { caseSensitive: true, minKeys: 3, natural: true },
+    ],
+    'sort-keys-fix/sort-keys-fix': 1,
   },
   settings: {
     react: {
-      version: 'detect'
-    }
-  }
+      version: 'detect',
+    },
+  },
 };

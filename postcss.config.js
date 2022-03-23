@@ -4,8 +4,8 @@ module.exports = {
     [
       'rfs',
       {
-        factor: 5
-      }
+        factor: 5,
+      },
     ],
     [
       'postcss-pxtorem',
@@ -13,8 +13,8 @@ module.exports = {
         mediaQuery: false,
         propWhiteList: [],
         replace: true,
-        rootValue: 16
-      }
+        rootValue: 16,
+      },
     ],
     [
       'postcss-preset-env',
@@ -22,24 +22,24 @@ module.exports = {
         features: {
           'custom-properties': {
             preserve: true,
-            warnings: true
-          }
+            warnings: true,
+          },
         },
-        stage: 1
-      }
+        stage: 1,
+      },
     ],
     [
       'autoprefixer',
       {
-        grid: 'autoplace'
-      }
+        grid: 'autoplace',
+      },
     ],
     'postcss-em-media-query',
     [
       'postcss-sort-media-queries',
       {
-        sort: 'mobile-first'
-      }
-    ]
-  ]
+        sort: 'mobile-first',
+      },
+    ],
+  ],
 };

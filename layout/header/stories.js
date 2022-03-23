@@ -7,12 +7,12 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Global Header and Navigation'
-      }
+        component: 'Global Header and Navigation',
+      },
     },
-    layout: 'fullscreen'
+    layout: 'fullscreen',
   },
-  title: 'Layout/Header'
+  title: 'Layout/Header',
 };
 
 const Template = (args) => (
