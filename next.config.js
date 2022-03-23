@@ -4,6 +4,9 @@ const postcssPlugins = require('./postcss.config');
 // ---------------------------------------------------------
 
 module.exports = {
+  eslint: {
+    ignoreDuringBuilds: true
+  },
   postcssOptions: {
     postcssPlugins
   },
