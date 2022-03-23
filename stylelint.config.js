@@ -5,6 +5,7 @@ module.exports = {
   ignoreFiles: ['**/*.js'],
   plugins: ['stylelint-order'],
   rules: {
+    'alpha-value-notation': 'percentage',
     'at-rule-empty-line-before': [
       'always',
       {
@@ -18,7 +19,7 @@ module.exports = {
     'at-rule-semicolon-newline-after': 'always',
     'at-rule-semicolon-space-before': 'never',
     'block-closing-brace-empty-line-before': 'never',
-    'block-closing-brace-newline-after': 'always',
+    'block-closing-brace-newline-after': ['always-single-line'],
     'block-closing-brace-newline-before': 'always',
     'block-no-empty': true,
     'block-opening-brace-newline-after': 'always',
@@ -45,6 +46,7 @@ module.exports = {
     'declaration-block-no-duplicate-properties': true,
     'declaration-block-semicolon-space-before': 'never',
     'declaration-block-trailing-semicolon': 'always',
+    'declaration-colon-newline-after': null,
     'declaration-empty-line-before': [
       'always',
       {
@@ -74,6 +76,7 @@ module.exports = {
     'media-query-list-comma-newline-after': 'always-multi-line',
     'media-query-list-comma-space-after': 'always-single-line',
     'media-query-list-comma-space-before': 'never',
+    'no-descending-specificity': null,
     'no-duplicate-at-import-rules': true,
     'no-duplicate-selectors': true,
     'no-empty-first-line': true,
@@ -102,10 +105,21 @@ module.exports = {
     'selector-combinator-space-before': 'always',
     'selector-list-comma-newline-after': 'always',
     'selector-list-comma-space-before': 'never',
+    'selector-pseudo-class-no-unknown': [
+      true,
+      {
+        ignorePseudoClasses: ['global'],
+      },
+    ],
     'shorthand-property-no-redundant-values': true,
     'string-quotes': 'single',
     'unit-case': 'lower',
-    'value-keyword-case': 'lower',
+    'value-keyword-case': [
+      'lower',
+      {
+        camelCaseSvgKeywords: true,
+      },
+    ],
     'value-list-comma-space-after': 'always-single-line',
     'value-list-comma-space-before': 'never',
     'value-list-max-empty-lines': 0,
