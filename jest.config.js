@@ -13,7 +13,6 @@ const customJestConfig = {
     '\\@templates\\/(.*)$': `<rootDir>/templates/$1`,
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
   },
-  setupFilesAfterEnv: ['<rootDir>/.jest/jest.setup.js'],
   testEnvironment: 'jest-environment-jsdom',
 };
 

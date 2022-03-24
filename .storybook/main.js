@@ -3,7 +3,6 @@ const path = require('path');
 const postcssConfig = require('../postcss.config');
 
 module.exports = {
-  stories: ['../**/*.stories.mdx', '../**/*stories.js'],
   addons: [
     '@storybook/addon-a11y',
     {
@@ -24,6 +23,10 @@ module.exports = {
     builder: 'webpack5',
   },
   staticDirs: ['../public'],
+  stories: [
+    '../(components|layout)**/*.stories.mdx',
+    '../(components|layout)/**/*stories.js',
+  ],
   webpackFinal: async (config) => {
     config.resolve = {
       alias: {
