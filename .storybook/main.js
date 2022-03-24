@@ -18,6 +18,7 @@ module.exports = {
     '@storybook/addon-jest',
     'storybook-addon-next',
     'storybook-dark-mode',
+    'storybook-mobile',
   ],
   core: {
     builder: 'webpack5',
