@@ -1,18 +1,8 @@
 module.exports = {
   env: {
-    browser: true,
-    es6: true,
-    jest: true,
-    node: true,
+    'jest/globals': true,
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:jsx-a11y/recommended',
-    'plugin:react/recommended',
-  ],
-  globals: {
-    __PATH_PREFIX__: true,
-  },
+  extends: ['next/core-web-vitals'],
   overrides: [
     {
       files: ['./pages/**/*.js', './templates/**/*.js'],
@@ -20,42 +10,34 @@ module.exports = {
         'react/prop-types': 0,
       },
     },
+    {
+      files: ['./**/fixtures.js', './**/stories.js'],
+      rules: {
+        'import/no-anonymous-default-export': 0,
+      },
+    },
   ],
-  parser: '@babel/eslint-parser',
-  parserOptions: {
-    babelOptions: {
-      presets: ['@babel/preset-react'],
-    },
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 12,
-    requireConfigFile: false,
-    sourceType: 'module',
-  },
-  plugins: ['jest', 'jsx-a11y', 'prettier', 'react', 'sort-keys-fix'],
+  plugins: ['jest', 'prettier', 'sort-keys-fix'],
   rules: {
-    'import/no-unresolved': 0,
-    'jsx-a11y/anchor-is-valid': [
-      'error',
+    'react/no-unescaped-entities': [2, { forbid: ['<', '>', '{', '}'] }],
+    'react/prop-types': [
+      2,
       {
-        aspects: ['invalidHref', 'preferButton'],
-        components: ['Link'],
-        specialLink: ['hrefLeft', 'hrefRight'],
+        ignore: [
+          'activeClassName',
+          'backgroundImageClassName',
+          'className',
+          'contentClassName',
+          'key',
+          'size',
+        ],
       },
     ],
-    'react/no-unescaped-entities': 0,
-    'react/prop-types': [2, { ignore: ['className'] }],
     'sort-keys': [
       'error',
       'asc',
-      { caseSensitive: true, minKeys: 3, natural: true },
+      { caseSensitive: true, minKeys: 2, natural: true },
     ],
     'sort-keys-fix/sort-keys-fix': 1,
-  },
-  settings: {
-    react: {
-      version: 'detect',
-    },
   },
 };

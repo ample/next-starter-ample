@@ -14,9 +14,13 @@ const { DEBUG_MEDIA_QUERIES } = publicRuntimeConfig;
 // ---------------------------------------------------------
 
 const DebugMediaQueries = () => {
+  const [isOpen, setOpen] = useState(false);
+
+  // -------------------------------------------------------
+
   if (DEBUG_MEDIA_QUERIES !== 'true') return null;
 
-  const [isOpen, setOpen] = useState(false);
+  // -------------------------------------------------------
 
   const classes = classNames(debug, isOpen, {
     [is_showing]: isOpen,
