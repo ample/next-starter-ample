@@ -22,22 +22,17 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "rfs": "^9.0.6",
-    "sass": "^1.49.9",
-    "sass-loader": "^12.6.0"
+    "sass": "^1.49.9"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@storybook/addon-a11y": "^6.3.12",
+    "@storybook/addon-a11y": "^6.4.19",
     "@storybook/addon-console": "^1.2.3",
-    "@storybook/addon-essentials": "^6.3.12",
-    "@storybook/addon-jest": "^6.3.12",
-    "@storybook/builder-webpack5": "^6.3.12",
-    "@storybook/manager-webpack5": "^6.3.12",
-    "@storybook/preset-scss": "file:local_modules/@storybook/preset-scss",
-    "@storybook/react": "^6.3.12",
+    "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/addon-jest": "^6.4.19",
+    "@storybook/builder-webpack5": "^6.4.19",
+    "@storybook/manager-webpack5": "^6.4.19",
+    "@storybook/react": "^6.4.19",
     "@testing-library/jest-dom": "^5.16.2",
-    "babel-loader": "^8.2.3",
-    "css-loader": "^6.5.1",
     "eslint": "^8.11.0",
     "eslint-config-next": "^12.1.0",
     "eslint-plugin-jest": "^26.1.2",
@@ -48,12 +43,16 @@
     "prettier": "^2.6.0",
     "prettier-stylelint": "^0.4.2",
     "react-test-renderer": "^17.0.2",
-    "storybook-dark-mode": "^1.0.8",
+    "storybook-addon-next": "^1.6.2",
+    "storybook-dark-mode": "^1.0.9",
     "stylelint": "^14.6.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard-scss": "^3.0.0",
-    "stylelint-order": "^5.0.0",
-    "typescript": "^4.6.2"
+    "stylelint-order": "^5.0.0"
+  },
+  "resolutions": {
+    "webpack": "^5",
+    "typescript": "^4"
   },
   "scripts": {
     "build": "DEBUG_MEDIA_QUERIES=false next build",
@@ -61,7 +60,7 @@
     "develop": "DEBUG_MEDIA_QUERIES=true next dev",
     "lint": "eslint -c .eslintrc.js . && stylelint --config stylelint.config.js './**/*.scss'",
     "start": "next start",
-    "storybook": "yarn run test:generate-output && BROWSER=none start-storybook --modern -s ./public -p 6006 --quiet",
+    "storybook": "yarn run test:generate-output && BROWSER=none start-storybook --modern -p 6006 --quiet",
     "storybook:build": "yarn run test:generate-output && build-storybook -c .storybook -o build/",
     "test": "jest .",
     "test:generate-output": "jest --json --outputFile=.jest-test-results.json",

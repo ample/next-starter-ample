@@ -6,27 +6,33 @@ import { themes } from '@storybook/theming';
 import { withTests } from '@storybook/addon-jest';
 import results from '../.jest-test-results.json';
 
+// ---------------------------------------------------------
+
 import './storybook.scss';
 import '../styles/libs/sanitize.scss';
 import '../styles/global-styles.scss';
 import '../styles/global-utilities.scss';
 
+// ---------------------------------------------------------
+
 // Storybook addon for redirecting console output into action logger panel
 setConsoleOptions({
-  panelExclude: []
+  panelExclude: [],
 });
 
 addParameters({
-  jest: ['test.spec.js']
+  jest: ['test.spec.js'],
 });
 
 addDecorator(
   withTests({
-    results
+    results,
   })
 );
 
 addDecorator((story) => <>{story()}</>);
+
+// ---------------------------------------------------------
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -34,11 +40,7 @@ export const parameters = {
   backgrounds: {
     default: 'light',
     grid: {
-      disable: true
-    }
+      disable: true,
+    },
   },
-  docs: {
-    theme: process.env.STORYBOOK_THEME_DARK === true ? themes.dark : themes.light
-  },
-  layout: 'centered'
 };
