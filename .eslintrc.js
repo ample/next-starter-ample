@@ -14,6 +14,7 @@ module.exports = {
       files: ['./**/fixtures.js', './**/stories.js'],
       rules: {
         'import/no-anonymous-default-export': 0,
+        'jsx-a11y/alt-text': [0, { img: ['Image'] }],
       },
     },
   ],

@@ -12,7 +12,7 @@ export default {
     docs: {
       description: {
         component:
-          'The Link component handles internal and external URLs automatically and should be used to manage links across the site.',
+          'The `<Link />` component handles internal and external URLs automatically and should be used to manage links across the site.',
       },
     },
   },
