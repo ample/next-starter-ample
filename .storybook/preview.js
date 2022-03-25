@@ -11,7 +11,6 @@ import results from '../.jest-test-results.json';
 import './storybook.scss';
 import '../styles/libs/sanitize.scss';
 import '../styles/global-styles.scss';
-import '../styles/global-utilities.scss';
 
 // ---------------------------------------------------------
 
