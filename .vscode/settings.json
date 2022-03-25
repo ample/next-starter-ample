@@ -1,5 +1,6 @@
 {
   "AllAutocomplete.wordListFiles": [
+    "layout/debug-media-queries/styles.module.scss",
     "styles/global/variables/_color.scss",
     "styles/global/variables/_font.scss",
     "styles/global/variables/_global.scss",
@@ -14,11 +15,15 @@
   "editor.formatOnSave": true,
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
+  "files.associations": {
+    "*.svg": "html"
+  },
   "files.encoding": "utf8",
   "files.eol": "\n",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "scss.validate": false,
   "stylelint.stylelintPath": "node_modules/stylelint",
-  "stylelint.validate": ["css", "scss"]
+  "stylelint.validate": ["css", "scss"],
+  "stylelint.snippet": ["css", "scss"]
 }
