@@ -9,7 +9,7 @@
 // extend storybook docs content area
 
 .sbdocs-content {
-  max-width: $large !important;
+  max-width: $x-large-highest !important;
 }
 
 // --------------------------------------------------------
@@ -77,7 +77,13 @@ h2.sbdocs-h2 {
     .innerZoomElementWrapper {
       > div {
         border: 0 !important;
-        padding: 16px;
+        padding: 0 10px;
+
+        > div {
+          > div {
+            height: auto !important;
+          }
+        }
       }
     }
   }
@@ -87,5 +93,5 @@ h2.sbdocs-h2 {
 // adjustments storybook docs in firefox
 
 #docs-root .docs-story > div:first-child > div:first-child {
-  height: auto;
+  height: auto !important;
 }

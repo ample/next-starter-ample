@@ -22,15 +22,11 @@ export default {
 const Template = (args) => {
   let layout = args.layout;
 
-  const widthAndHeight = layout === 'fill' || !layout;
-
   return (
     <div
       style={{
-        height: widthAndHeight ? '400px' : undefined,
-        minHeight: '500wh',
-        minWidth: '50vw',
-        width: widthAndHeight ? '600px' : undefined,
+        minHeight: layout === 'fill' ? 600 : undefined,
+        minWidth: layout === 'fill' ? 1000 : undefined,
       }}
     >
       <Image {...args} />

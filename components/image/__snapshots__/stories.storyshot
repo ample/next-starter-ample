@@ -4,10 +4,8 @@ exports[`Storyshots Components/Image Component Props 1`] = `
 <div
   style={
     Object {
-      "height": "400px",
-      "minHeight": "500wh",
-      "minWidth": "50vw",
-      "width": "600px",
+      "minHeight": undefined,
+      "minWidth": undefined,
     }
   }
 >
@@ -136,10 +134,8 @@ exports[`Storyshots Components/Image Layout Is Fill 1`] = `
 <div
   style={
     Object {
-      "height": "400px",
-      "minHeight": "500wh",
-      "minWidth": "50vw",
-      "width": "600px",
+      "minHeight": 600,
+      "minWidth": 1000,
     }
   }
 >
@@ -237,10 +233,8 @@ exports[`Storyshots Components/Image Layout Is Fixed 1`] = `
 <div
   style={
     Object {
-      "height": undefined,
-      "minHeight": "500wh",
-      "minWidth": "50vw",
-      "width": undefined,
+      "minHeight": undefined,
+      "minWidth": undefined,
     }
   }
 >
@@ -333,10 +327,8 @@ exports[`Storyshots Components/Image Layout Is Intrinsic 1`] = `
 <div
   style={
     Object {
-      "height": "400px",
-      "minHeight": "500wh",
-      "minWidth": "50vw",
-      "width": "600px",
+      "minHeight": undefined,
+      "minWidth": undefined,
     }
   }
 >
@@ -465,10 +457,8 @@ exports[`Storyshots Components/Image Layout Is Responsive 1`] = `
 <div
   style={
     Object {
-      "height": undefined,
-      "minHeight": "500wh",
-      "minWidth": "50vw",
-      "width": undefined,
+      "minHeight": undefined,
+      "minWidth": undefined,
     }
   }
 >
@@ -578,10 +568,8 @@ exports[`Storyshots Components/Image With Link 1`] = `
 <div
   style={
     Object {
-      "height": "400px",
-      "minHeight": "500wh",
-      "minWidth": "50vw",
-      "width": "600px",
+      "minHeight": undefined,
+      "minWidth": undefined,
     }
   }
 >
@@ -717,10 +705,8 @@ exports[`Storyshots Components/Image With SVG 1`] = `
 <div
   style={
     Object {
-      "height": "400px",
-      "minHeight": "500wh",
-      "minWidth": "50vw",
-      "width": "600px",
+      "minHeight": undefined,
+      "minWidth": undefined,
     }
   }
 >
