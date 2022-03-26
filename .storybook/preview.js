@@ -35,7 +35,7 @@ addDecorator((story) => <>{story()}</>);
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
-  controls: { sort: 'alpha' },
+  controls: { sort: 'alpha', expanded: true },
   backgrounds: {
     default: 'light',
     grid: {
