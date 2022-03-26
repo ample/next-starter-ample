@@ -4,8 +4,8 @@ import classNames from 'classnames';
 
 // ---------------------------------------------------------
 
+import Icon from '@components/icon';
 import Link from '@components/link';
-import SVG from '@components/svg';
 
 // ---------------------------------------------------------
 
@@ -39,7 +39,7 @@ const Button = (props) => {
   return (
     <Link className={classes} title={title} url={url}>
       {children}
-      {theme === 'arrow' && <SVG name="angle-right" />}
+      {theme === 'arrow' && <Icon name="arrow-right" />}
     </Link>
   );
 };
