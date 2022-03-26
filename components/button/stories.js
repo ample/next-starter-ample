@@ -1,13 +1,14 @@
 import React from 'react';
 
+// ---------------------------------------------------------
+
 import { component as Button, fixtures } from '.';
+
+// ---------------------------------------------------------
 
 export default {
   argTypes: {
     theme: {
-      control: { type: 'select' },
-    },
-    type: {
       control: { type: 'select' },
     },
   },
@@ -16,7 +17,7 @@ export default {
     docs: {
       description: {
         component:
-          'The button has several predefined themes and either renders as an `<a>` or `<button>` tag depending on the props that are used.',
+          'The <Button /> component has predefined themes and either renders as an `<a>` or `<button>` tag depending on the props that are used.',
       },
     },
   },
@@ -25,23 +26,16 @@ export default {
 
 const Template = (args) => <Button {...args} />;
 
-export const props = Template.bind({});
-props.args = fixtures.props;
+// ---------------------------------------------------------
 
-export const defaultTheme = Template.bind({});
-defaultTheme.args = {
-  ...props.args,
-  ...fixtures.default,
-};
+export const componentProps = Template.bind({});
+componentProps.args = fixtures.componentProps;
 
-export const outlineTheme = Template.bind({});
-outlineTheme.args = {
-  ...props.args,
-  ...fixtures.outline,
-};
+export const themeArrow = Template.bind({});
+themeArrow.args = fixtures.themeArrow;
 
-export const ArrowTheme = Template.bind({});
-ArrowTheme.args = {
-  ...props.args,
-  ...fixtures.arrow,
-};
+export const themeDefault = Template.bind({});
+themeDefault.args = fixtures.themeDefault;
+
+export const themeOutline = Template.bind({});
+themeOutline.args = fixtures.themeOutline;

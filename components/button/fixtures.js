@@ -1,16 +1,24 @@
+const buttonProps = {
+  children: 'Call to action',
+  theme: 'arrow',
+  url: '#',
+};
+
+// ---------------------------------------------------------
+
 export default {
-  arrow: {
-    theme: 'arrow',
+  componentProps: {
+    ...buttonProps,
   },
-  default: {
+  themeArrow: {
+    ...buttonProps,
+  },
+  themeDefault: {
+    ...buttonProps,
     theme: 'default',
   },
-  outline: {
+  themeOutline: {
+    ...buttonProps,
     theme: 'outline',
-  },
-  props: {
-    label: 'Call to action',
-    theme: 'arrow',
-    url: '#',
   },
 };
