@@ -71,7 +71,7 @@ It's recommended to set up seamless integration with your editor.
 
 > Note: _When using VS Code, most ESLint and Stylelint conventions will be fixed automatically._
 
-Linters run `pre-push` to ensure there are no errors or warnings.
+Linters run `pre-commit` to ensure there are no errors or warnings.
 
 ### License
 

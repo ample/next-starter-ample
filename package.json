@@ -43,8 +43,10 @@
     "eslint-plugin-jest": "^26.1.3",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "husky": "^7.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
+    "lint-staged": "^12.3.7",
     "prettier": "^2.6.1",
     "prettier-stylelint": "^0.4.2",
     "react-test-renderer": "^17.0.2",
@@ -66,7 +68,9 @@
     "build": "DEBUG_MEDIA_QUERIES=false next build",
     "clean": "rm -rf .next",
     "develop": "DEBUG_MEDIA_QUERIES=true next dev",
-    "lint": "eslint -c .eslintrc.js . && stylelint --config stylelint.config.js './**/*.scss'",
+    "lint-js": "eslint -c .eslintrc.js .",
+    "lint-scss": "stylelint --config stylelint.config.js './**/*.scss'",
+    "prepare": "husky install",
     "sass-variables": "sass-export ./styles/global/variables/_color.scss -o ./.storybook/stories/colors/colors.json",
     "start": "next start",
     "storybook": "yarn run test:generate-output && BROWSER=none start-storybook --modern -p 6006 --quiet",
@@ -79,6 +83,17 @@
     "defaults",
     "not IE 11"
   ],
+  "lint-staged": {
+    "*.js": [
+      "yarn lint-js"
+    ],
+    "(fixtures||stories||test.spec).js": [
+      "yarn test"
+    ],
+    "*.scss": [
+      "yarn lint-scss"
+    ]
+  },
   "prettier": {
     "endOfLine": "lf",
     "printWidth": 80,
