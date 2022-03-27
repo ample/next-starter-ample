@@ -47,3 +47,6 @@ export default {
 
 export const availableColors = () => <Colors />;
 availableColors.storyName = 'Colors';
+availableColors.parameters = {
+  storyshots: { disable: true },
+};
