@@ -71,9 +71,9 @@
     "start": "next start",
     "storybook": "yarn run test:generate-output && BROWSER=none start-storybook --modern -p 6006 --quiet",
     "storybook:build": "yarn run test:generate-output && build-storybook -c .storybook -o build/",
-    "test": "jest .",
-    "test:generate-output": "jest --json --outputFile=.jest-test-results.json",
-    "test:update": "jest . --updateSnapshot"
+    "test": "jest . --config ./.jest/jest.config.js",
+    "test:generate-output": "yarn test --json --outputFile=.jest-test-results.json",
+    "test:update": "yarn test --updateSnapshot"
   },
   "browserslist": [
     "defaults",
