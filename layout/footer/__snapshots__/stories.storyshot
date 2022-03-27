@@ -1,14 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Layout/Footer Props 1`] = `
-<div
-  className="sb-centered"
+<footer
+  className="footer"
 >
-  <footer
-    className="footer"
-  >
-    <hr />
-    And this is the footer.
-  </footer>
-</div>
+  <hr />
+  And this is the footer.
+</footer>
 `;

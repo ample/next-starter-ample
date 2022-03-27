@@ -1,5 +1,5 @@
 const path = require('path');
-const postcssPlugins = require('./postcss.config');
+const postcssPlugins = require('./.config/postcss.config');
 
 // ---------------------------------------------------------
 

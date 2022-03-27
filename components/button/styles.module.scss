@@ -40,19 +40,9 @@
 
     svg {
       fill: currentColor;
+      height: 10px;
       margin-left: 6px;
       width: 12px;
-    }
-
-    &::after {
-      background-color: currentColor;
-      bottom: 1px;
-      content: '';
-      display: block;
-      height: 1px;
-      left: 0;
-      position: absolute;
-      width: calc(100% - 14px);
     }
 
     @include hover {

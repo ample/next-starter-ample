@@ -10,16 +10,11 @@ export default {
         component: 'Global Footer Navigation with Social Nav',
       },
     },
-    layout: 'fullscreen',
   },
   title: 'Layout/Footer',
 };
 
-const Template = (args) => (
-  <div className="sb-centered">
-    <Footer {...args} />
-  </div>
-);
+const Template = (args) => <Footer {...args} />;
 
 export const Props = Template.bind({});
 Props.args = { ...fixtures };

@@ -1,14 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Layout/Header Props 1`] = `
-<div
-  className="sb-centered"
+<header
+  className="header"
 >
-  <header
-    className="header"
-  >
-    This is the header.
-    <hr />
-  </header>
-</div>
+  This is the header.
+  <hr />
+</header>
 `;
