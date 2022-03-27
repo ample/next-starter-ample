@@ -27,6 +27,7 @@ module.exports = {
   stories: [
     '../(components|layout)**/*.stories.mdx',
     '../(components|layout)/**/*stories.js',
+    './stories/**/*stories.js',
   ],
   webpackFinal: async (config) => {
     config.resolve = {

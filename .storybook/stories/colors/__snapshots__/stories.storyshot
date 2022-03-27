@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Documentation/Colors Colors 1`] = `
+<div
+  className="colors_container"
+>
+  <div
+    className="color"
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "var(--color-black)",
+        }
+      }
+    />
+    <div>
+      <span>
+        <code>
+          <em>
+            var(
+            --color-black
+            )
+          </em>
+        </code>
+      </span>
+    </div>
+  </div>
+  <div
+    className="color"
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "var(--color-blueprint)",
+        }
+      }
+    />
+    <div>
+      <span>
+        <code>
+          <em>
+            var(
+            --color-blueprint
+            )
+          </em>
+        </code>
+      </span>
+    </div>
+  </div>
+  <div
+    className="color"
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "var(--color-blueprint-bright)",
+        }
+      }
+    />
+    <div>
+      <span>
+        <code>
+          <em>
+            var(
+            --color-blueprint-bright
+            )
+          </em>
+        </code>
+      </span>
+    </div>
+  </div>
+  <div
+    className="color"
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "var(--color-blueprint-soft)",
+        }
+      }
+    />
+    <div>
+      <span>
+        <code>
+          <em>
+            var(
+            --color-blueprint-soft
+            )
+          </em>
+        </code>
+      </span>
+    </div>
+  </div>
+  <div
+    className="color"
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "var(--color-blueprint-light)",
+        }
+      }
+    />
+    <div>
+      <span>
+        <code>
+          <em>
+            var(
+            --color-blueprint-light
+            )
+          </em>
+        </code>
+      </span>
+    </div>
+  </div>
+  <div
+    className="color"
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "var(--color-blueprint-lighter)",
+        }
+      }
+    />
+    <div>
+      <span>
+        <code>
+          <em>
+            var(
+            --color-blueprint-lighter
+            )
+          </em>
+        </code>
+      </span>
+    </div>
+  </div>
+  <div
+    className="color"
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "var(--color-white)",
+        }
+      }
+    />
+    <div>
+      <span>
+        <code>
+          <em>
+            var(
+            --color-white
+            )
+          </em>
+        </code>
+      </span>
+    </div>
+  </div>
+</div>
+`;
