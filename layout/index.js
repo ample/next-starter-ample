@@ -6,7 +6,7 @@ import Head from 'next/head';
 
 import Footer from './footer';
 import Header from './header';
-import DebugMediaQueries from './debug-media-queries';
+import DebugMediaQueries from '@utilities/debug-media-queries';
 
 // ---------------------------------------------------------
 

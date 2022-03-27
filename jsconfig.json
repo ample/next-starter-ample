@@ -6,7 +6,8 @@
       "@content/*": ["./content/*"],
       "@layout/*": ["./layout/*"],
       "@root/*": ["./*"],
-      "@templates/*": ["./templates/*"]
+      "@templates/*": ["./templates/*"],
+      "@utilities/*": ["./utilities/*"]
     }
   },
   "exclude": ["node_modules", "public"]

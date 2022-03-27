@@ -46,6 +46,7 @@ module.exports = {
         '@root': path.resolve(__dirname, '../../'),
         '@styles': path.resolve(__dirname, '../../styles'),
         '@templates': path.resolve(__dirname, '../../templates'),
+        '@utilities': path.resolve(__dirname, '../../utilities/'),
       },
     };
 

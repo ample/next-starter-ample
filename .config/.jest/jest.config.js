@@ -11,6 +11,7 @@ const customJestConfig = {
     '\\@layout\\/(.*)$': `<rootDir>/layout/$1`,
     '\\@root\\/(.*)$': `<rootDir>/$1`,
     '\\@templates\\/(.*)$': `<rootDir>/templates/$1`,
+    '\\@utilities\\/(.*)$': `<rootDir>/utilities/$1`,
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
   },
   rootDir: '../../',
