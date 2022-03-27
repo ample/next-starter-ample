@@ -17,6 +17,10 @@ module.exports = {
         'jsx-a11y/alt-text': [0, { img: ['Image'] }],
       },
     },
+    {
+      extends: ['plugin:testing-library/react'],
+      files: ['./**/test.spec.js'],
+    },
   ],
   plugins: ['jest', 'prettier', 'sort-keys-fix'],
   rules: {
