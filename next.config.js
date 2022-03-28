@@ -7,6 +7,10 @@ module.exports = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
   postcssOptions: {
     postcssPlugins,
   },
