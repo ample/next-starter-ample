@@ -3,6 +3,7 @@ module.exports = {
     'jest/globals': true,
   },
   extends: ['next/core-web-vitals'],
+  ignorePatterns: ['**/build/*.js'],
   overrides: [
     {
       files: ['./pages/**/*.js', './templates/**/*.js'],

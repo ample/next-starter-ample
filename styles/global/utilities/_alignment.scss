@@ -1,9 +1,9 @@
 // --------------------------------------------------------
 
-$text-alignments: left, center, right;
+// $text-alignments: left, center, right;
 
-@each $alignment in $text-alignments {
-  .text-#{$alignment} {
-    text-align: $alignment;
-  }
-}
+// @each $alignment in $text-alignments {
+//   .text-#{$alignment} {
+//     text-align: $alignment;
+//   }
+// }

@@ -103,6 +103,36 @@
     "tabWidth": 2,
     "useTabs": false
   },
+  "postcss": {
+    "plugins": {
+      "postcss-normalize": {},
+      "rfs": {
+        "factor": 5
+      },
+      "postcss-pxtorem": {
+        "mediaQuery": false,
+        "propWhiteList": [],
+        "replace": true,
+        "rootValue": 16
+      },
+      "postcss-preset-env": {
+        "features": {
+          "custom-properties": {
+            "preserve": true,
+            "warnings": true
+          }
+        },
+        "stage": 1
+      },
+      "autoprefixer": {
+        "grid": true
+      },
+      "postcss-em-media-query": {},
+      "postcss-sort-media-queries": {
+        "sort": "mobile-first"
+      }
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ample/next-starter-ample"

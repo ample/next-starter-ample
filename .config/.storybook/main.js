@@ -1,6 +1,6 @@
-const isDevelopment = process.env.NODE_ENV === 'development';
 const path = require('path');
-const postcssConfig = require('../postcss.config');
+
+// ---------------------------------------------------------
 
 module.exports = {
   addons: [
