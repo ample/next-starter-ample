@@ -44,6 +44,8 @@ const Button = (props) => {
   );
 };
 
+// ---------------------------------------------------------
+
 Button.propTypes = {
   /**
    * Specifies the content that's rendered inside the button.
