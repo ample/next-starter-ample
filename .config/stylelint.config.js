@@ -3,7 +3,7 @@ module.exports = {
   extends: ['stylelint-config-prettier', 'stylelint-config-standard-scss'],
   files: ['**/*.scss'],
   ignoreFiles: ['**/*.js'],
-  plugins: ['stylelint-order'],
+  plugins: ['stylelint-no-unsupported-browser-features', 'stylelint-order'],
   rules: {
     'alpha-value-notation': 'percentage',
     'at-rule-empty-line-before': [
@@ -87,6 +87,12 @@ module.exports = {
     'number-no-trailing-zeros': true,
     'order/order': ['custom-properties', 'declarations'],
     'order/properties-alphabetical-order': true,
+    'plugin/no-unsupported-browser-features': [
+      true,
+      {
+        ignorePartialSupport: true,
+      },
+    ],
     'rule-empty-line-before': [
       'always',
       {
