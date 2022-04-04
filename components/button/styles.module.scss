@@ -1,6 +1,8 @@
 // ---------------------------------------------------------
 
 @mixin default-button {
+  @include font-size(16px, 16px);
+
   background-color: var(--color-blueprint);
   border: 1px solid var(--color-blueprint);
   border-radius: 3px;
@@ -9,9 +11,11 @@
   padding: 15px 24px 17px;
   transition: background-color 0.25s ease-out, color 0.25s ease-out;
 
-  @include hover {
-    background-color: var(--color-blueprint-bright);
-    border-color: var(--color-blueprint-bright);
+  &:not(:disabled) {
+    @include hover {
+      background-color: var(--color-blueprint-bright);
+      border-color: var(--color-blueprint-bright);
+    }
   }
 }
 
@@ -19,6 +23,18 @@
 
 .button {
   display: inline-block;
+
+  &:is(button) {
+    cursor: pointer;
+  }
+
+  &:disabled {
+    opacity: 60%;
+
+    @include hover {
+      cursor: default;
+    }
+  }
 
   @include hover {
     text-decoration: none;
@@ -61,6 +77,7 @@
 
     @include hover {
       background-color: var(--color-blueprint-light);
+      color: var(--color-white);
     }
   }
 }

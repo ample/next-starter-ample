@@ -25,7 +25,8 @@ const themeOptions = {
 // ---------------------------------------------------------
 
 const Button = (props) => {
-  let { children, className, theme, title, url } = props;
+  let { className, children, disabled, onClick, theme, title, type, url } =
+    props;
 
   // -------------------------------------------------------
 
@@ -36,12 +37,34 @@ const Button = (props) => {
 
   // -------------------------------------------------------
 
-  return (
-    <Link className={classes} title={title} url={url}>
+  const buttonContents = (
+    <>
       {children}
       {theme === 'arrow' && <Icon name="arrow-right" />}
+    </>
+  );
+
+  let buttonComponent = (
+    <Link className={classes} title={title} url={url}>
+      {buttonContents}
     </Link>
   );
+
+  if (!url && (onClick || type)) {
+    buttonComponent = (
+      <button
+        className={classes}
+        disabled={disabled}
+        onClick={onClick}
+        title={title}
+        type={type}
+      >
+        {buttonContents}
+      </button>
+    );
+  }
+
+  return buttonComponent;
 };
 
 // ---------------------------------------------------------
@@ -51,6 +74,16 @@ Button.propTypes = {
    * Specifies the content that's rendered inside the button.
    */
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+
+  /**
+   * Specifies if the button is disabled
+   */
+  disabled: PropTypes.bool,
+
+  /**
+   * Specifies a click function and renders a `<button>` element.
+   */
+  onClick: PropTypes.func,
 
   /**
    * Specifies the theme.
@@ -63,9 +96,14 @@ Button.propTypes = {
   title: PropTypes.string,
 
   /**
+   * Specifies the type attribute and renders a `<button>` element.
+   */
+  type: PropTypes.oneOf(['submit', 'button']),
+
+  /**
    * Specifies where to link.
    */
-  url: PropTypes.string.isRequired,
+  url: PropTypes.string,
 };
 
 Button.defaultProps = {

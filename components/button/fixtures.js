@@ -21,4 +21,17 @@ export default {
     ...buttonProps,
     theme: 'outline',
   },
+  withButtonElement: {
+    ...buttonProps,
+    theme: 'default',
+    type: 'button',
+    url: null,
+  },
+  withButtonElementDisabled: {
+    ...buttonProps,
+    disabled: true,
+    theme: 'default',
+    type: 'button',
+    url: null,
+  },
 };

@@ -39,3 +39,9 @@ themeDefault.args = fixtures.themeDefault;
 
 export const themeOutline = Template.bind({});
 themeOutline.args = fixtures.themeOutline;
+
+export const withButtonElement = Template.bind({});
+withButtonElement.args = fixtures.withButtonElement;
+
+export const withButtonElementDisabled = Template.bind({});
+withButtonElementDisabled.args = fixtures.withButtonElementDisabled;

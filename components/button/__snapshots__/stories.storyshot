@@ -45,3 +45,22 @@ exports[`Storyshots Components/Button Theme Outline 1`] = `
   Call to action
 </a>
 `;
+
+exports[`Storyshots Components/Button With Button Element 1`] = `
+<button
+  className="button theme_default"
+  type="button"
+>
+  Call to action
+</button>
+`;
+
+exports[`Storyshots Components/Button With Button Element Disabled 1`] = `
+<button
+  className="button theme_default"
+  disabled={true}
+  type="button"
+>
+  Call to action
+</button>
+`;
