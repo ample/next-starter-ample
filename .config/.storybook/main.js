@@ -15,6 +15,7 @@ module.exports = {
         },
       },
     },
+    '@whitespace/storybook-addon-html',
     '@storybook/addon-jest',
     {
       name: 'storybook-addon-next',
