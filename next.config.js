@@ -10,6 +10,9 @@ module.exports = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+  images: {
+    domains: ['images.unsplash.com'],
+  },
   publicRuntimeConfig: {
     DEBUG_MEDIA_QUERIES: process.env.DEBUG_MEDIA_QUERIES,
   },
