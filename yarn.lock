@@ -2143,22 +2143,6 @@
     regenerator-runtime "^0.13.7"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-jest@^6.4.20":
-  version "6.4.20"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-jest/-/addon-jest-6.4.20.tgz#bead8cdbbcc8ac9a7aeaebe3dbc14cd0d32c14ae"
-  integrity sha512-Eg67PVILNX9b2yFo1NWqX0raJhIRmAEZlWjPfLZqaRZKPHbPlvyDUqNKNC1lvi9tWCVU46ZzERiweyI9+t9FJg==
-  dependencies:
-    "@storybook/addons" "6.4.20"
-    "@storybook/api" "6.4.20"
-    "@storybook/components" "6.4.20"
-    "@storybook/core-events" "6.4.20"
-    "@storybook/theming" "6.4.20"
-    core-js "^3.8.2"
-    global "^4.4.0"
-    react-sizeme "^3.0.1"
-    regenerator-runtime "^0.13.7"
-    upath "^1.2.0"
-
 "@storybook/addon-measure@6.4.20":
   version "6.4.20"
   resolved "https://registry.yarnpkg.com/@storybook/addon-measure/-/addon-measure-6.4.20.tgz#ed3b23ceca4c8c0f6d1ac6ef6be789c570251d8b"
@@ -14116,11 +14100,6 @@ unzip-response@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/unzip-response/-/unzip-response-2.0.1.tgz#d2f0f737d16b0615e72a6935ed04214572d56f97"
   integrity sha1-0vD3N9FrBhXnKmk17QQhRXLVb5c=
-
-upath@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/upath/-/upath-1.2.0.tgz#8f66dbcd55a883acdae4408af8b035a5044c1894"
-  integrity sha512-aZwGpamFO61g3OlfT7OQCHqhGnW43ieH9WZeP7QxN/G/jS4jfqUkZxoryvJgVPEcrl5NL/ggHsSmLMHuH64Lhg==
 
 update-notifier@^2.2.0:
   version "2.5.0"

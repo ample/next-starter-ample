@@ -3,11 +3,6 @@ import { action } from '@storybook/addon-actions';
 import { addDecorator, addParameters } from '@storybook/react';
 import { setConsoleOptions } from '@storybook/addon-console';
 import { themes } from '@storybook/theming';
-import { withTests } from '@storybook/addon-jest';
-
-// ---------------------------------------------------------
-
-const results = React.lazy(() => import('../.jest/.jest-test-results.json'));
 
 // ---------------------------------------------------------
 
@@ -21,16 +16,6 @@ import '../../styles/global-styles.scss';
 setConsoleOptions({
   panelExclude: [],
 });
-
-addParameters({
-  jest: ['test.spec.js'],
-});
-
-addDecorator(
-  withTests({
-    results,
-  })
-);
 
 addDecorator((story) => <>{story()}</>);
 
