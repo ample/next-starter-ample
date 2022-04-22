@@ -6,6 +6,10 @@ import { themes } from '@storybook/theming';
 
 // ---------------------------------------------------------
 
+import { customViewports } from './custom-viewports';
+
+// ---------------------------------------------------------
+
 import './storybook.scss';
 import '../../styles/libs/sanitize.scss';
 import '../../styles/global-styles.scss';
@@ -28,6 +32,11 @@ export const parameters = {
     default: 'light',
     grid: {
       disable: true,
+    },
+  },
+  viewport: {
+    viewports: {
+      ...customViewports,
     },
   },
 };
