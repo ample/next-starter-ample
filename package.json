@@ -90,7 +90,7 @@
     "*.js": [
       "yarn lint-js"
     ],
-    "(fixtures||stories||test.spec).js": [
+    "(component||fixtures||stories||test.spec).js": [
       "yarn test"
     ],
     "*.scss": [
