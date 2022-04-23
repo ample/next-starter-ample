@@ -23,8 +23,16 @@ const Link = (props) => {
 
   // ---------------------------------------------------------
 
+  let linkComponent = (
+    <NextLink href={url}>
+      <a aria-label={title} className={classes} title={title}>
+        {children}
+      </a>
+    </NextLink>
+  );
+
   if (externalUrl) {
-    return (
+    linkComponent = (
       <a
         aria-label={title}
         className={classes}
@@ -36,15 +44,9 @@ const Link = (props) => {
         {children}
       </a>
     );
-  } else {
-    return (
-      <NextLink href={url}>
-        <a aria-label={title} className={classes} title={title}>
-          {children}
-        </a>
-      </NextLink>
-    );
   }
+
+  return linkComponent;
 };
 
 Link.propTypes = {

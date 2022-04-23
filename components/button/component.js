@@ -44,27 +44,23 @@ const Button = (props) => {
     </>
   );
 
-  let buttonComponent;
+  let buttonComponent = (
+    <button
+      className={classes}
+      disabled={disabled}
+      onClick={onClick}
+      title={title}
+      type={type}
+    >
+      {buttonContents}
+    </button>
+  );
 
   if (url) {
     buttonComponent = (
       <Link className={classes} title={title} url={url}>
         {buttonContents}
       </Link>
-    );
-  }
-
-  if (!url && (onClick || type)) {
-    buttonComponent = (
-      <button
-        className={classes}
-        disabled={disabled}
-        onClick={onClick}
-        title={title}
-        type={type}
-      >
-        {buttonContents}
-      </button>
     );
   }
 

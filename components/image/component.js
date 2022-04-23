@@ -1,6 +1,5 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import NextImage from 'next/image';
 import path from 'path';
 import { startCase } from 'lodash';
