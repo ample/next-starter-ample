@@ -2,7 +2,13 @@ module.exports = {
   env: {
     'jest/globals': true,
   },
-  extends: ['next/core-web-vitals'],
+  extends: [
+    'eslint:recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:react/recommended',
+    'plugin:storybook/recommended',
+    'next/core-web-vitals',
+  ],
   ignorePatterns: ['**/build/*.js'],
   overrides: [
     {
@@ -23,9 +29,17 @@ module.exports = {
       files: ['./**/test.spec.js'],
     },
   ],
-  plugins: ['jest', 'prettier', 'sort-keys-fix'],
+  plugins: ['jest', 'jsx-a11y', 'prettier', 'react', 'sort-keys-fix'],
   rules: {
     'react/no-unescaped-entities': [2, { forbid: ['<', '>', '{', '}'] }],
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      {
+        aspects: ['invalidHref', 'preferButton'],
+        components: ['Link'],
+        specialLink: ['hrefLeft', 'hrefRight'],
+      },
+    ],
     'react/prop-types': [
       2,
       {
