@@ -25,8 +25,9 @@ const Template = (args) => {
   return (
     <div
       style={{
-        minHeight: layout === 'fill' ? 600 : undefined,
-        minWidth: layout === 'fill' ? 1000 : undefined,
+        height: layout === 'fill' ? 800 : undefined,
+        position: layout === 'fill' ? 'relative' : undefined,
+        width: layout === 'fill' ? 1000 : undefined,
       }}
     >
       <Image {...args} />
@@ -45,7 +46,10 @@ layoutIsFill.args = {
 };
 layoutIsFill.parameters = {
   docs: {
-    description: { story: 'Grow in both X and Y axes to fill container.' },
+    description: {
+      story:
+        'Grow in both X and Y axes to fill the parent container. To render correctly, the parent should be set to `position: ”relative”` with a width and height.',
+    },
   },
 };
 
