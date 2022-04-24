@@ -79,7 +79,7 @@
     "start": "next start",
     "storybook": "BROWSER=none start-storybook --quiet --modern -c .config/.storybook -p 6006 ",
     "storybook:build": "build-storybook --modern -c .config/.storybook",
-    "test": "jest . --c ./.config/.jest/jest.config.js",
+    "test": "jest --c ./.config/.jest/jest.config.js",
     "test:update": "yarn test --updateSnapshot"
   },
   "browserslist": [
@@ -91,8 +91,11 @@
     "*.js": [
       "yarn lint-js"
     ],
-    "(component||fixtures||stories||test.spec).js": [
-      "yarn test"
+    "component.js": [
+      "yarn test ./storyshots.test.js"
+    ],
+    "(fixtures||stories||test.spec).js": [
+      "yarn test ."
     ],
     "*.scss": [
       "yarn lint-scss"
