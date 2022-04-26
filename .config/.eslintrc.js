@@ -31,7 +31,6 @@ module.exports = {
   ],
   plugins: ['jest', 'jsx-a11y', 'prettier', 'react', 'sort-keys-fix'],
   rules: {
-    'react/no-unescaped-entities': [2, { forbid: ['<', '>', '{', '}'] }],
     'jsx-a11y/anchor-is-valid': [
       'error',
       {
@@ -40,6 +39,7 @@ module.exports = {
         specialLink: ['hrefLeft', 'hrefRight'],
       },
     ],
+    'react/no-unescaped-entities': [2, { forbid: ['<', '>', '{', '}'] }],
     'react/prop-types': [
       2,
       {

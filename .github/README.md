@@ -68,9 +68,11 @@ If you wish to add a custom alias to your project, touch all appropriate config 
 It's recommended to set up seamless integration with your editor.
 
 - [ESLint](http://eslint.org/) statically analyzes your code to find problems in JavaScript quickly. ([editor-integration](http://eslint.org/docs/user-guide/integrations#editors))
+- [Prettier](https://prettier.io) enforces a code formatting style guide for consistency across the team. ([editor-integration](https://prettier.io/docs/en/editors.html)\)
 - [Stylelint](https://stylelint.io) helps avoid errors and enforces conventions in styles. ([editor-integration](https://stylelint.io/user-guide/complementary-tools/#editor-plugins)\)
 
-> Note: _When using VS Code, most ESLint and Stylelint conventions will be fixed automatically._
+> Note: For an optimal development experience in VS Code install recommended workspace extensions.
+> When using VS Code, most ESLint and Stylelint conventions will be fixed automatically.
 
 Linters run `pre-commit` to ensure there are no errors or warnings.
 
