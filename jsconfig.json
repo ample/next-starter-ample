@@ -2,13 +2,12 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["./src/components/*"],
-      "@content/*": ["./src/content/*"],
-      "@layout/*": ["./src/layout/*"],
+      "@components/*": ["components/*"],
+      "@content/*": ["./content/*"],
+      "@layout/*": ["./layout/*"],
       "@root/*": ["./*"],
-      "@snippets/*": ["./src/snippets/*"],
-      "@src/*": ["./src/*"],
-      "@templates/*": ["./src/templates/*"]
+      "@templates/*": ["./templates/*"],
+      "@utilities/*": ["./utilities/*"]
     }
   },
   "exclude": ["node_modules", "public"]
