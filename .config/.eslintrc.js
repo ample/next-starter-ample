@@ -9,7 +9,7 @@ module.exports = {
     'plugin:storybook/recommended',
     'next/core-web-vitals',
   ],
-  ignorePatterns: ['**/build/*.js'],
+  ignorePatterns: ['**/storybook-static/*.js'],
   overrides: [
     {
       files: ['./pages/**/*.js', './templates/**/*.js'],
