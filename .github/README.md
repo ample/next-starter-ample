@@ -74,7 +74,7 @@ It's recommended to set up seamless integration with your editor.
 > Note: For an optimal development experience in VS Code install recommended workspace extensions.
 > When using VS Code, most ESLint and Stylelint conventions will be fixed automatically.
 
-Linters run `pre-commit` to ensure there are no errors or warnings.
+Linters run `pre-commit` on staged files to ensure there are no errors or warnings.
 
 ### License
 
